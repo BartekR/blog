@@ -1,0 +1,11 @@
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\bin\Debug\ApplicationUpgradeExample.exe.config
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\bin\Debug\ApplicationUpgradeExample.exe
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\bin\Debug\ApplicationUpgradeExample.pdb
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\bin\Debug\Microsoft.SqlServer.ManagedDTS.dll
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\bin\Debug\Microsoft.SqlServer.DTSRuntimeWrap.dll
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\bin\Debug\Microsoft.SqlServer.PipelineHost.dll
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\bin\Debug\Microsoft.SqlServer.DTSPipelineWrap.dll
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\obj\Debug\ApplicationUpgradeExample.csprojResolveAssemblyReference.cache
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\obj\Debug\ApplicationUpgradeExample.csproj.CoreCompileInputs.cache
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\obj\Debug\ApplicationUpgradeExample.exe
+c:\users\administrator\source\repos\ApplicationUpgradeExample\ApplicationUpgradeExample\obj\Debug\ApplicationUpgradeExample.pdb
