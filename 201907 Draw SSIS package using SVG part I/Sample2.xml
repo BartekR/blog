@@ -1,0 +1,200 @@
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="136,42"
+          Id="Package\SEQC MAIN\SEQC Serial\DFT Serial 1"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\SEQC MAIN\SEQC Serial\DFT Serial 2"
+          TopLeft="5.50000000000003,107.5" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\SEQC MAIN\SEQC Serial\DFT Serial 3"
+          TopLeft="5.50000000000003,209.5" />
+        <EdgeLayout
+          Id="Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint]"
+          TopLeft="73.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 1]"
+          TopLeft="73.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="150,306"
+          Size="147,350"
+          Id="Package\SEQC MAIN\SEQC Serial"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\SEQC MAIN\FELC Parallel\EPT Parallel 1"
+          TopLeft="5.5,5.49999999999989" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\SEQC MAIN\FELC Parallel\EPT Parallel 2"
+          TopLeft="209.5,5.49999999999989" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\SEQC MAIN\FELC Parallel\EPT Parallel 3"
+          TopLeft="413.5,5.49999999999989" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="562,102"
+          Size="562,145"
+          Id="Package\SEQC MAIN\FELC Parallel"
+          TopLeft="213,108" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\SEQC MAIN\FLC Tree\EXPR @j"
+          TopLeft="229.5,5.5" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\SEQC MAIN\FLC Tree\DFT Tree True"
+          TopLeft="5.5,107.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\SEQC MAIN\FLC Tree\DFT Tree False"
+          TopLeft="214.5,107.5" />
+        <EdgeLayout
+          Id="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint]"
+          TopLeft="270.833333333333,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-191.333333333333,60"
+              Start="0,0"
+              End="-191.333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4736842105263"
+                    Point2="0,24.4736842105263"
+                    Point3="-4,24.4736842105263" />
+                  <mssgle:LineSegment
+                    End="-187.333333333333,24.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-187.333333333333,24.4736842105263"
+                    Point2="-191.333333333333,24.4736842105263"
+                    Point3="-191.333333333333,28.4736842105263" />
+                  <mssgle:LineSegment
+                    End="-191.333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-176.548522135417,29.4736842105263,161.7637109375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint 1]"
+          TopLeft="308.166666666667,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18.6666666666666,60"
+              Start="0,0"
+              End="-18.6666666666666,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4736842105263"
+                    Point2="0,24.4736842105263"
+                    Point3="-4,24.4736842105263" />
+                  <mssgle:LineSegment
+                    End="-14.6666666666666,24.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.6666666666666,24.4736842105263"
+                    Point2="-18.6666666666666,24.4736842105263"
+                    Point3="-18.6666666666666,28.4736842105263" />
+                  <mssgle:LineSegment
+                    End="-18.6666666666666,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-40.4551888020833,29.4736842105263,62.2437109375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="370,204"
+          Size="370,248"
+          Id="Package\SEQC MAIN\FLC Tree"
+          TopLeft="836,56.4999999999999" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="1212,410"
+          Size="1212,454"
+          Id="Package\SEQC MAIN"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <PrecedenceConstraint
+    design-time-name="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint]">
+    <ShowAnnotation>ConstraintOptions</ShowAnnotation>
+  </PrecedenceConstraint>
+  <PrecedenceConstraint
+    design-time-name="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint 1]">
+    <ShowAnnotation>ConstraintDescription</ShowAnnotation>
+  </PrecedenceConstraint>
+</Objects>

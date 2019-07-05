@@ -1,0 +1,479 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/5/2019 9:52:00 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="THOR"
+  DTS:CreatorName="THOR\brata_000"
+  DTS:DTSID="{0B027120-AB98-4541-BB1B-1746673C6571}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3026.27"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{231E1F3F-B51C-4458-88D1-75E86F8AE1E3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A06B39A6-5DEA-4864-B525-620176AC37E6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="i">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1FD439E8-331E-466A-BC13-BBB6878CE9C9}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="j">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SEQC MAIN"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{4194114B-D609-42BE-960F-032DADE64628}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SEQC MAIN">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SEQC MAIN\FELC Parallel"
+          DTS:CreationName="STOCK:FOREACHLOOP"
+          DTS:Description="Foreach Loop Container"
+          DTS:DTSID="{574E620B-CCCD-40F5-887F-C33CE9F8F241}"
+          DTS:ExecutableType="STOCK:FOREACHLOOP"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FELC Parallel">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\FELC Parallel\EPT Parallel 1"
+              DTS:CreationName="Microsoft.ExecutePackageTask"
+              DTS:Description="Execute Package Task"
+              DTS:DTSID="{F92F6B52-40E8-42AD-8DED-9EF66BD8A44D}"
+              DTS:ExecutableType="Microsoft.ExecutePackageTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="EPT Parallel 1"
+              DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <ExecutePackageTask>
+                  <UseProjectReference>True</UseProjectReference>
+                  <PackageName>Empty.dtsx</PackageName>
+                </ExecutePackageTask>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\FELC Parallel\EPT Parallel 2"
+              DTS:CreationName="Microsoft.ExecutePackageTask"
+              DTS:Description="Execute Package Task"
+              DTS:DTSID="{79d4e543-490f-4bdd-8bf5-4bda433655ef}"
+              DTS:ExecutableType="Microsoft.ExecutePackageTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="EPT Parallel 2"
+              DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <ExecutePackageTask>
+                  <UseProjectReference>True</UseProjectReference>
+                  <PackageName>Empty.dtsx</PackageName>
+                </ExecutePackageTask>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\FELC Parallel\EPT Parallel 3"
+              DTS:CreationName="Microsoft.ExecutePackageTask"
+              DTS:Description="Execute Package Task"
+              DTS:DTSID="{298f36a0-25f3-42ff-82f1-e611fb397795}"
+              DTS:ExecutableType="Microsoft.ExecutePackageTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="EPT Parallel 3"
+              DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <ExecutePackageTask>
+                  <UseProjectReference>True</UseProjectReference>
+                  <PackageName>Empty.dtsx</PackageName>
+                </ExecutePackageTask>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQC MAIN\FLC Tree"
+          DTS:AssignExpression="@i = @i + 1"
+          DTS:CreationName="STOCK:FORLOOP"
+          DTS:Description="For Loop Container"
+          DTS:DTSID="{326975AD-E28E-4B8A-B0EA-3A89DA4CB51B}"
+          DTS:EvalExpression="@i &lt; 5"
+          DTS:ExecutableType="STOCK:FORLOOP"
+          DTS:InitExpression="@i = 1"
+          DTS:LocaleID="-1"
+          DTS:MaxConcurrent="1"
+          DTS:ObjectName="FLC Tree">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\FLC Tree\DFT Tree False"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{DCD71224-1EE5-4E26-8978-1A2012B99E65}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="DFT Tree False"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\FLC Tree\DFT Tree True"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{D9D8E68B-1C09-4242-80DC-625AA2371549}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="DFT Tree True"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\FLC Tree\EXPR @j"
+              DTS:CreationName="Microsoft.ExpressionTask"
+              DTS:Description="Expression Task"
+              DTS:DTSID="{3530C634-A5D5-4E32-B07D-6DC5AE2328D3}"
+              DTS:ExecutableType="Microsoft.ExpressionTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="EXPR @j"
+              DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <ExpressionTask
+                  Expression="@[User::j] =  @[User::i] * 3" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{CBA8E7C2-488C-42B0-A938-F2AED37DAF65}"
+              DTS:EvalOp="1"
+              DTS:Expression="@[User::j] &lt; 10"
+              DTS:From="Package\SEQC MAIN\FLC Tree\EXPR @j"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\SEQC MAIN\FLC Tree\DFT Tree True" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint 1]"
+              DTS:CreationName=""
+              DTS:Description="@j &gt;= 10"
+              DTS:DTSID="{1A85A7BD-B655-435C-AAED-A7F245524549}"
+              DTS:EvalOp="1"
+              DTS:Expression="@[User::j] &gt;= 10"
+              DTS:From="Package\SEQC MAIN\FLC Tree\EXPR @j"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint 1"
+              DTS:To="Package\SEQC MAIN\FLC Tree\DFT Tree False" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQC MAIN\SEQC Serial"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{F1B66EDA-38A9-4E10-8884-0927034C3AB9}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SEQC Serial">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\SEQC Serial\DFT Serial 1"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{2EAFC4AC-C494-40F4-8AF1-1641EF9483E0}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="DFT Serial 1"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\SEQC Serial\DFT Serial 2"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{f9435439-7445-4453-8d03-da1be0dc7779}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="DFT Serial 2"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\SEQC Serial\DFT Serial 3"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{ebfe535c-2aa9-47d3-bd19-e0a2bdcb857c}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="DFT Serial 3"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{7142B233-2B84-4B72-A7ED-FA2C18FEE110}"
+              DTS:From="Package\SEQC MAIN\SEQC Serial\DFT Serial 1"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\SEQC MAIN\SEQC Serial\DFT Serial 2" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 1]"
+              DTS:CreationName=""
+              DTS:DTSID="{D8610F91-DF6E-45B7-BC2A-77D71A868C31}"
+              DTS:From="Package\SEQC MAIN\SEQC Serial\DFT Serial 2"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint 1"
+              DTS:To="Package\SEQC MAIN\SEQC Serial\DFT Serial 3" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="136,42"
+          Id="Package\SEQC MAIN\SEQC Serial\DFT Serial 1"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\SEQC MAIN\SEQC Serial\DFT Serial 2"
+          TopLeft="5.50000000000003,107.5" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\SEQC MAIN\SEQC Serial\DFT Serial 3"
+          TopLeft="5.50000000000003,209.5" />
+        <EdgeLayout
+          Id="Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint]"
+          TopLeft="73.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 1]"
+          TopLeft="73.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="150,306"
+          Size="147,350"
+          Id="Package\SEQC MAIN\SEQC Serial"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\SEQC MAIN\FELC Parallel\EPT Parallel 1"
+          TopLeft="5.5,5.49999999999989" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\SEQC MAIN\FELC Parallel\EPT Parallel 2"
+          TopLeft="209.5,5.49999999999989" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\SEQC MAIN\FELC Parallel\EPT Parallel 3"
+          TopLeft="413.5,5.49999999999989" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="562,102"
+          Size="562,145"
+          Id="Package\SEQC MAIN\FELC Parallel"
+          TopLeft="213,108" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\SEQC MAIN\FLC Tree\EXPR @j"
+          TopLeft="229.5,5.5" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\SEQC MAIN\FLC Tree\DFT Tree True"
+          TopLeft="5.5,107.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\SEQC MAIN\FLC Tree\DFT Tree False"
+          TopLeft="214.5,107.5" />
+        <EdgeLayout
+          Id="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint]"
+          TopLeft="270.833333333333,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-191.333333333333,60"
+              Start="0,0"
+              End="-191.333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4736842105263"
+                    Point2="0,24.4736842105263"
+                    Point3="-4,24.4736842105263" />
+                  <mssgle:LineSegment
+                    End="-187.333333333333,24.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-187.333333333333,24.4736842105263"
+                    Point2="-191.333333333333,24.4736842105263"
+                    Point3="-191.333333333333,28.4736842105263" />
+                  <mssgle:LineSegment
+                    End="-191.333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-176.548522135417,29.4736842105263,161.7637109375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint 1]"
+          TopLeft="308.166666666667,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18.6666666666666,60"
+              Start="0,0"
+              End="-18.6666666666666,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4736842105263"
+                    Point2="0,24.4736842105263"
+                    Point3="-4,24.4736842105263" />
+                  <mssgle:LineSegment
+                    End="-14.6666666666666,24.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.6666666666666,24.4736842105263"
+                    Point2="-18.6666666666666,24.4736842105263"
+                    Point3="-18.6666666666666,28.4736842105263" />
+                  <mssgle:LineSegment
+                    End="-18.6666666666666,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-40.4551888020833,29.4736842105263,62.2437109375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="370,204"
+          Size="370,248"
+          Id="Package\SEQC MAIN\FLC Tree"
+          TopLeft="836,56.4999999999999" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="1212,410"
+          Size="1212,454"
+          Id="Package\SEQC MAIN"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <PrecedenceConstraint
+    design-time-name="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint]">
+    <ShowAnnotation>ConstraintOptions</ShowAnnotation>
+  </PrecedenceConstraint>
+  <PrecedenceConstraint
+    design-time-name="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint 1]">
+    <ShowAnnotation>ConstraintDescription</ShowAnnotation>
+  </PrecedenceConstraint>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

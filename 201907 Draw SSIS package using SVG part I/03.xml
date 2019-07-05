@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Objects Version="sql11">
+    <Package>
+        <LayoutInfo>
+            <GraphLayout
+                xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph"
+                xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph"
+                xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml"
+            >
+                <NodeLayout Size="179,42" Id="Package\SQL Create table test" TopLeft="5.50000000000003,5.5" />
+            </GraphLayout>
+        </LayoutInfo>
+    </Package>
+</Objects>

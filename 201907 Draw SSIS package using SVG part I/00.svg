@@ -1,0 +1,14 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox = "0 0 500 500"
+>
+
+    <!-- A simple SVG example - two rectangles; just to get an idea of SVG file -->
+
+    <rect x="10" y="10" height="100" width="100"
+        style="stroke:#ff0000; fill: #0000ff"/>
+
+    <rect x="110" y="110" height="100" width="100"
+        style="stroke:#009900; fill: #00cc00"/>
+
+</svg>

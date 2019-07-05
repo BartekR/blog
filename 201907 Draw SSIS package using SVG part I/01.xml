@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!-- First try: pretend, that NodeLayout is the first element under the root -->
+<Objects Version="sql11">
+    <NodeLayout Size="179,42" Id="Package\SQL Create table test" TopLeft="5.50000000000003,5.5" />
+</Objects>

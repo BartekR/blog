@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Objects Version="sql11">
+    <Package>
+        <LayoutInfo>
+            <GraphLayout>
+                <NodeLayout Size="179,42" Id="Package\SQL Create table test" TopLeft="5.50000000000003,5.5" />
+            </GraphLayout>
+        </LayoutInfo>
+    </Package>
+</Objects>
