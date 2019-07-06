@@ -3,7 +3,7 @@
     viewBox = "0 0 500 500"
 >
 
-    <!-- A simple SVG example - two rectangles; just to get an idea of SVG file -->
+    <!-- A simple SVG example - two squares; just to get an idea of SVG file -->
 
     <rect x="10" y="10" height="100" width="100"
         style="stroke:#ff0000; fill: #0000ff"/>
