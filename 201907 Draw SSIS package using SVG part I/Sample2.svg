@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
      xmlns:gl="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph"
      xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph"
-     width="1000"
-     height="600"
-     viewBox="0 0 1000 600"
-     vrsion="1.1">
-   <defs>
-      <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-         <rect width="50" height="50" fill="white"/>
-         <path d="M 50 0 L 0 0 0 80"
-               fill="none"
-               stroke="lightgray"
-               stroke-width="1"/>
-      </pattern>
-      <marker id="myMarker"
-              viewBox="0 0 10 10"
-              refX="1"
-              refY="5"
-              markerUnits="strokeWidth"
-              orient="auto"
-              markerWidth="8"
-              markerHeight="6">
-         <polyline points="0,0 10,5 0,10 1,5" fill="darkblue"/>
-      </marker>
-   </defs>
-   <rect x="0" y="0" width="100%" height="100%" fill="url(#grid)"/>
+     viewBox="0 0 600 600">
+   <rect width="100%" height="100%" fill="lightgray"/>
    <g>
       <rect x="5.50000000000001"
             y="5.5"
@@ -34,14 +11,14 @@
             ry="10"
             width="136"
             height="42"
-            fill="lightgray"
+            fill="white"
             stroke="black"
             stroke-width="1"/>
       <text x="10.50000000000001"
             y="33.5"
             fill="black"
             font-family="Verdana"
-            font-size="15">DFT Serial 1</text>
+            font-size="12">DFT Serial 1</text>
    </g>
    <g>
       <rect x="5.50000000000003"
@@ -50,14 +27,14 @@
             ry="10"
             width="136"
             height="42"
-            fill="lightgray"
+            fill="white"
             stroke="black"
             stroke-width="1"/>
       <text x="10.50000000000003"
             y="135.5"
             fill="black"
             font-family="Verdana"
-            font-size="15">DFT Serial 2</text>
+            font-size="12">DFT Serial 2</text>
    </g>
    <g>
       <rect x="5.50000000000003"
@@ -66,14 +43,14 @@
             ry="10"
             width="136"
             height="42"
-            fill="lightgray"
+            fill="white"
             stroke="black"
             stroke-width="1"/>
       <text x="10.50000000000003"
             y="237.5"
             fill="black"
             font-family="Verdana"
-            font-size="15">DFT Serial 3</text>
+            font-size="12">DFT Serial 3</text>
    </g>
    <g>
       <rect x="5.5"
@@ -82,14 +59,14 @@
             ry="10"
             width="143"
             height="42"
-            fill="lightgray"
+            fill="white"
             stroke="black"
             stroke-width="1"/>
       <text x="10.5"
             y="33.499999999999886"
             fill="black"
             font-family="Verdana"
-            font-size="15">EPT Parallel 1</text>
+            font-size="12">EPT Parallel 1</text>
    </g>
    <g>
       <rect x="209.5"
@@ -98,14 +75,14 @@
             ry="10"
             width="143"
             height="42"
-            fill="lightgray"
+            fill="white"
             stroke="black"
             stroke-width="1"/>
       <text x="214.5"
             y="33.499999999999886"
             fill="black"
             font-family="Verdana"
-            font-size="15">EPT Parallel 2</text>
+            font-size="12">EPT Parallel 2</text>
    </g>
    <g>
       <rect x="413.5"
@@ -114,14 +91,14 @@
             ry="10"
             width="143"
             height="42"
-            fill="lightgray"
+            fill="white"
             stroke="black"
             stroke-width="1"/>
       <text x="418.5"
             y="33.499999999999886"
             fill="black"
             font-family="Verdana"
-            font-size="15">EPT Parallel 3</text>
+            font-size="12">EPT Parallel 3</text>
    </g>
    <g>
       <rect x="229.5"
@@ -130,14 +107,14 @@
             ry="10"
             width="120"
             height="42"
-            fill="lightgray"
+            fill="white"
             stroke="black"
             stroke-width="1"/>
       <text x="234.5"
             y="33.5"
             fill="black"
             font-family="Verdana"
-            font-size="15">EXPR @j</text>
+            font-size="12">EXPR @j</text>
    </g>
    <g>
       <rect x="5.5"
@@ -146,14 +123,14 @@
             ry="10"
             width="148"
             height="42"
-            fill="lightgray"
+            fill="white"
             stroke="black"
             stroke-width="1"/>
       <text x="10.5"
             y="135.5"
             fill="black"
             font-family="Verdana"
-            font-size="15">DFT Tree True</text>
+            font-size="12">DFT Tree True</text>
    </g>
    <g>
       <rect x="214.5"
@@ -162,14 +139,14 @@
             ry="10"
             width="150"
             height="42"
-            fill="lightgray"
+            fill="white"
             stroke="black"
             stroke-width="1"/>
       <text x="219.5"
             y="135.5"
             fill="black"
             font-family="Verdana"
-            font-size="15">DFT Tree False</text>
+            font-size="12">DFT Tree False</text>
    </g>
    <g>
       <line x1="73.5"
@@ -177,7 +154,8 @@
             style="stroke:#006600"
             x2="73.5"
             y2="100"/>
-      <polygon points="68.5,100 78.5,100 73.5,107.5"/>
+      <polygon points="70.5,100 76.5,100 73.5,107.5"
+               style="stroke:#006600; fill:#006600"/>
    </g>
    <g>
       <line x1="73.5"
@@ -185,7 +163,8 @@
             style="stroke:#006600"
             x2="73.5"
             y2="202"/>
-      <polygon points="68.5,202 78.5,202 73.5,209.5"/>
+      <polygon points="70.5,202 76.5,202 73.5,209.5"
+               style="stroke:#006600; fill:#006600"/>
    </g>
    <g>
       <line x1="270.833333333333"
@@ -193,7 +172,8 @@
             style="stroke:#006600"
             x2="79.49999999999997"
             y2="100"/>
-      <polygon points="74.49999999999997,100 84.49999999999997,100 79.49999999999997,107.5"/>
+      <polygon points="76.49999999999997,100 82.49999999999997,100 79.49999999999997,107.5"
+               style="stroke:#006600; fill:#006600"/>
    </g>
    <g>
       <line x1="308.166666666667"
@@ -201,6 +181,7 @@
             style="stroke:#006600"
             x2="289.50000000000045"
             y2="100"/>
-      <polygon points="284.50000000000045,100 294.50000000000045,100 289.50000000000045,107.5"/>
+      <polygon points="286.50000000000045,100 292.50000000000045,100 289.50000000000045,107.5"
+               style="stroke:#006600; fill:#006600"/>
    </g>
 </svg>
