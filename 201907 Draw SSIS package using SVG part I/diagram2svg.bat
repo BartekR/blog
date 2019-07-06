@@ -7,5 +7,6 @@ set SAXONPATH=D:\tools\SaxonHE9.9N\bin
 rem %SAXONPATH%\Transform -s:Sample2.xml -xsl:package2svg.xsl -o:Sample2.svg
 %SAXONPATH%\Transform -s:01.xml -xsl:01.xsl -o:01.svg
 %SAXONPATH%\Transform -s:02.xml -xsl:02.xsl -o:02.svg
+%SAXONPATH%\Transform -s:02.xml -xsl:02a.xsl -o:02a.svg
 %SAXONPATH%\Transform -s:03.xml -xsl:03.xsl -o:03.svg
 
