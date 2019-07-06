@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:gl="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph"
+     viewBox="0 0 1000 600">
+   <g>
+      <rect x="5.50000000000003"
+            y="5.5"
+            rx="10"
+            ry="10"
+            width="179"
+            height="42"
+            fill="lightgray"
+            stroke="black"
+            stroke-width="1"/>
+   </g>
+</svg>
