@@ -3,7 +3,7 @@
      xmlns:xs="http://www.w3.org/2001/XMLSchema"
      xmlns:gl="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph"
      xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph"
-     viewBox="0 0 1600 1600">
+     viewBox="0 0 1300 600">
    <rect width="100%" height="100%" fill="lightgray"/>
    <!--Package\SEQC MAIN\SEQC 01\SEQC 011\SEQC 0111-->
    <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC 01:Package\SEQC MAIN\SEQC 01\SEQC 011:Package\SEQC MAIN\SEQC 01\SEQC 011\SEQC 0111-->
