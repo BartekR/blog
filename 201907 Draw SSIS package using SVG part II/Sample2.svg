@@ -6,7 +6,7 @@
      viewBox="0 0 1300 600">
    <rect width="100%" height="100%" fill="lightgray"/>
    <!--Package\SEQC MAIN\SEQC Serial-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
    <!--5.5,5.5-->
    <g>
       <rect x="11"
@@ -34,7 +34,7 @@
             font-size="12">SEQC Serial</text>
    </g>
    <!--Package\SEQC MAIN\FELC Parallel-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel-->
    <!--5.5,5.5-->
    <g>
       <rect x="218.5"
@@ -62,7 +62,7 @@
             font-size="12">FELC Parallel</text>
    </g>
    <!--Package\SEQC MAIN\FLC Tree-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree-->
    <!--5.5,5.5-->
    <g>
       <rect x="841.5"
@@ -90,7 +90,7 @@
             font-size="12">FLC Tree</text>
    </g>
    <!--Package\SEQC MAIN-->
-   <!--Package:Package\SEQC MAIN-->
+   <!--Package\SEQC MAIN-->
    <!--0,0-->
    <g>
       <rect x="5.5"
@@ -117,7 +117,7 @@
             font-family="Verdana"
             font-size="12">SEQC MAIN</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 1-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 1-->
    <g>
       <rect x="16.50000000000001"
             y="102.5"
@@ -134,7 +134,7 @@
             font-family="Verdana"
             font-size="12">DFT Serial 1</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 2-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 2-->
    <g>
       <rect x="16.50000000000003"
             y="204.5"
@@ -151,7 +151,7 @@
             font-family="Verdana"
             font-size="12">DFT Serial 2</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 3-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 3-->
    <g>
       <rect x="16.50000000000003"
             y="306.5"
@@ -168,7 +168,7 @@
             font-family="Verdana"
             font-size="12">DFT Serial 3</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel:Package\SEQC MAIN\FELC Parallel\EPT Parallel 1-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel:Package\SEQC MAIN\FELC Parallel\EPT Parallel 1-->
    <g>
       <rect x="224"
             y="204.9999999999999"
@@ -185,7 +185,7 @@
             font-family="Verdana"
             font-size="12">EPT Parallel 1</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel:Package\SEQC MAIN\FELC Parallel\EPT Parallel 2-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel:Package\SEQC MAIN\FELC Parallel\EPT Parallel 2-->
    <g>
       <rect x="428"
             y="204.9999999999999"
@@ -202,7 +202,7 @@
             font-family="Verdana"
             font-size="12">EPT Parallel 2</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel:Package\SEQC MAIN\FELC Parallel\EPT Parallel 3-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel:Package\SEQC MAIN\FELC Parallel\EPT Parallel 3-->
    <g>
       <rect x="632"
             y="204.9999999999999"
@@ -219,7 +219,7 @@
             font-family="Verdana"
             font-size="12">EPT Parallel 3</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree:Package\SEQC MAIN\FLC Tree\EXPR @j-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree:Package\SEQC MAIN\FLC Tree\EXPR @j-->
    <g>
       <rect x="1071"
             y="153.4999999999999"
@@ -236,7 +236,7 @@
             font-family="Verdana"
             font-size="12">EXPR @j</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree:Package\SEQC MAIN\FLC Tree\DFT Tree True-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree:Package\SEQC MAIN\FLC Tree\DFT Tree True-->
    <g>
       <rect x="847"
             y="255.4999999999999"
@@ -253,7 +253,7 @@
             font-family="Verdana"
             font-size="12">DFT Tree True</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree:Package\SEQC MAIN\FLC Tree\DFT Tree False-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree:Package\SEQC MAIN\FLC Tree\DFT Tree False-->
    <g>
       <rect x="1056"
             y="255.4999999999999"
@@ -270,7 +270,7 @@
             font-family="Verdana"
             font-size="12">DFT Tree False</text>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
    <!--Package\SEQC MAIN\SEQC Serial*Package\SEQC MAIN-->
    <g><!--offsetX: 11--><!--offsetY: 97-->
       <line x1="84.5"
@@ -281,7 +281,7 @@
       <polygon points="81.5,197 87.5,197 84.5,204.5"
                style="stroke:#006600; fill:#006600"/>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
    <!--Package\SEQC MAIN\SEQC Serial*Package\SEQC MAIN-->
    <g><!--offsetX: 11--><!--offsetY: 97-->
       <line x1="84.5"
@@ -292,7 +292,7 @@
       <polygon points="81.5,299 87.5,299 84.5,306.5"
                style="stroke:#006600; fill:#006600"/>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree-->
    <!--Package\SEQC MAIN\FLC Tree*Package\SEQC MAIN-->
    <g><!--offsetX: 841.5--><!--offsetY: 147.9999999999999-->
       <line x1="1112.333333333333"
@@ -317,7 +317,7 @@
       <polygon points="918,247.9999999999999 924,247.9999999999999 921,255.4999999999999"
                style="stroke:#006600; fill:#006600"/>
    </g>
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree-->
    <!--Package\SEQC MAIN\FLC Tree*Package\SEQC MAIN-->
    <g><!--offsetX: 841.5--><!--offsetY: 147.9999999999999-->
       <line x1="1149.666666666667"

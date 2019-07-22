@@ -6,7 +6,7 @@
      viewBox="0 0 1300 600">
    <rect width="100%" height="100%" fill="lightgray"/>
    <!--Package\SEQC MAIN\SEQC 01\SEQC 011\SEQC 0111-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC 01:Package\SEQC MAIN\SEQC 01\SEQC 011:Package\SEQC MAIN\SEQC 01\SEQC 011\SEQC 0111-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC 01:Package\SEQC MAIN\SEQC 01\SEQC 011:Package\SEQC MAIN\SEQC 01\SEQC 011\SEQC 0111-->
    <!--16.500000000000092,16.49999999999989-->
    <g>
       <rect x="22.000000000000092"
@@ -34,7 +34,7 @@
             font-size="12">SEQC 0111</text>
    </g>
    <!--Package\SEQC MAIN\SEQC 01\SEQC 011-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC 01:Package\SEQC MAIN\SEQC 01\SEQC 011-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC 01:Package\SEQC MAIN\SEQC 01\SEQC 011-->
    <!--11.00000000000006,10.99999999999989-->
    <g>
       <rect x="16.500000000000092"
@@ -62,7 +62,7 @@
             font-size="12">SEQC 011</text>
    </g>
    <!--Package\SEQC MAIN\SEQC 01-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC 01-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC 01-->
    <!--5.5,5.5-->
    <g>
       <rect x="11.00000000000006"
@@ -90,7 +90,7 @@
             font-size="12">SEQC 01</text>
    </g>
    <!--Package\SEQC MAIN\SEQC 02\SEQC 021\SEQC 0211-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02:Package\SEQC MAIN\SEQC 02\SEQC 021:Package\SEQC MAIN\SEQC 02\SEQC 021\SEQC 0211-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02:Package\SEQC MAIN\SEQC 02\SEQC 021:Package\SEQC MAIN\SEQC 02\SEQC 021\SEQC 0211-->
    <!--304.00000000000006,16.49999999999989-->
    <g>
       <rect x="309.50000000000006"
@@ -118,7 +118,7 @@
             font-size="12">SEQC 0211</text>
    </g>
    <!--Package\SEQC MAIN\SEQC 02\SEQC 021-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02:Package\SEQC MAIN\SEQC 02\SEQC 021-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02:Package\SEQC MAIN\SEQC 02\SEQC 021-->
    <!--298.5,10.99999999999989-->
    <g>
       <rect x="304.00000000000006"
@@ -146,7 +146,7 @@
             font-size="12">SEQC 021</text>
    </g>
    <!--Package\SEQC MAIN\SEQC 02\SEQC 022\SEQC 0221-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02:Package\SEQC MAIN\SEQC 02\SEQC 022:Package\SEQC MAIN\SEQC 02\SEQC 022\SEQC 0221-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02:Package\SEQC MAIN\SEQC 02\SEQC 022:Package\SEQC MAIN\SEQC 02\SEQC 022\SEQC 0221-->
    <!--581,16.49999999999989-->
    <g>
       <rect x="586.5"
@@ -174,7 +174,7 @@
             font-size="12">SEQC 0221</text>
    </g>
    <!--Package\SEQC MAIN\SEQC 02\SEQC 022-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02:Package\SEQC MAIN\SEQC 02\SEQC 022-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02:Package\SEQC MAIN\SEQC 02\SEQC 022-->
    <!--298.5,10.99999999999989-->
    <g>
       <rect x="581"
@@ -202,7 +202,7 @@
             font-size="12">SEQC 022</text>
    </g>
    <!--Package\SEQC MAIN\SEQC 02-->
-   <!--Package:Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC 02-->
    <!--5.5,5.5-->
    <g>
       <rect x="298.5"
@@ -230,7 +230,7 @@
             font-size="12">SEQC 02</text>
    </g>
    <!--Package\SEQC MAIN-->
-   <!--Package:Package\SEQC MAIN-->
+   <!--Package\SEQC MAIN-->
    <!--0,0-->
    <g>
       <rect x="5.5"

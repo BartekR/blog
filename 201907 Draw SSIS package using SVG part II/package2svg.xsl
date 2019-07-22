@@ -46,13 +46,13 @@
 
     <xsl:variable name="IdTokens" select="tokenize(@Id, '\\')" />
     <!-- get all possible @Id combinations for parent sequences -->
-    <xsl:variable name="paths3" select="for $x in (1 to count($IdTokens)) return string-join(subsequence($IdTokens, 1, $x), '\')" />
+    <xsl:variable name="IdPaths" select="for $x in (2 to count($IdTokens)) return string-join(subsequence($IdTokens, 1, $x), '\')" />
 
-    <xsl:comment><xsl:value-of select="$paths3" separator=":" /></xsl:comment>
+    <xsl:comment><xsl:value-of select="$IdPaths" separator=":" /></xsl:comment>
 
     <!-- select only nodes with @Id from the list -->
     <xsl:variable name="paths" as="node()*">
-      <xsl:sequence select="following-sibling::gl:ContainerLayout[@Id=$paths3]" />
+      <xsl:sequence select="following-sibling::gl:ContainerLayout[@Id=$IdPaths]" />
     </xsl:variable>
 
     <!-- <xsl:comment><xsl:value-of select="$paths/@TopLeft" separator="*"  /></xsl:comment> -->
@@ -110,13 +110,13 @@
 
     <xsl:variable name="IdTokens" select="tokenize(@Id, '\\')" />
     <!-- get all possible @Id combinations for parent sequences -->
-    <xsl:variable name="paths3" select="for $x in (1 to count($IdTokens)) return string-join(subsequence($IdTokens, 1, $x), '\')" />
+    <xsl:variable name="IdPaths" select="for $x in (2 to count($IdTokens)) return string-join(subsequence($IdTokens, 1, $x), '\')" />
 
-    <xsl:comment><xsl:value-of select="$paths3" separator=":" /></xsl:comment>
+    <xsl:comment><xsl:value-of select="$IdPaths" separator=":" /></xsl:comment>
 
     <!-- select only nodes with @Id from the list -->
     <xsl:variable name="paths" as="node()*">
-      <xsl:sequence select="following-sibling::gl:ContainerLayout[@Id=$paths3]" />
+      <xsl:sequence select="following-sibling::gl:ContainerLayout[@Id=$IdPaths]" />
     </xsl:variable>
 
     <xsl:variable name="x0" select="number(substring-before(@TopLeft, ','))" />
@@ -159,13 +159,13 @@
     <xsl:variable name="ParsedId" select="substring-before(@Id, '.PrecedenceConstraints')" />
     <xsl:variable name="IdTokens" select="tokenize($ParsedId, '\\')" />
     <!-- get all possible @Id combinations for parent sequences -->
-    <xsl:variable name="paths3" select="for $x in (1 to count($IdTokens)) return string-join(subsequence($IdTokens, 1, $x), '\')" />
+    <xsl:variable name="IdPaths" select="for $x in (2 to count($IdTokens)) return string-join(subsequence($IdTokens, 1, $x), '\')" />
 
-    <xsl:comment><xsl:value-of select="$paths3" separator=":" /></xsl:comment>
+    <xsl:comment><xsl:value-of select="$IdPaths" separator=":" /></xsl:comment>
 
     <!-- select only nodes with @Id from the list -->
     <xsl:variable name="paths" as="node()*">
-      <xsl:sequence select="following-sibling::gl:ContainerLayout[@Id=$paths3]" />
+      <xsl:sequence select="following-sibling::gl:ContainerLayout[@Id=$IdPaths]" />
     </xsl:variable>
 
     <xsl:comment><xsl:value-of select="$paths/@Id" separator="*"  /></xsl:comment>
@@ -262,10 +262,27 @@
 
   <xsl:template match="gl:AnnotationLayout">
 
+    <xsl:variable name="IdTokens" select="tokenize(@Id, '\\')" />
+    <!-- get all possible @Id combinations for parent sequences -->
+    <xsl:variable name="IdPaths" select="for $x in (2 to count($IdTokens)) return string-join(subsequence($IdTokens, 1, $x), '\')" />
+
+    <xsl:comment><xsl:value-of select="$IdPaths" separator=":" /></xsl:comment>
+
+    <!-- select only nodes with @Id from the list -->
+    <xsl:variable name="paths" as="node()*">
+      <xsl:sequence select="following-sibling::gl:ContainerLayout[@Id=$IdPaths]" />
+    </xsl:variable>
+
+    <xsl:variable name="x0" select="number(substring-before(@TopLeft, ','))" />
+    <xsl:variable name="y0" select="number(substring-after(@TopLeft, ','))" />
+
+    <xsl:variable name="x" select="sum(for $p in $paths return number(substring-before($p/@TopLeft, ','))) + $x0" />
+    <xsl:variable name="y" select="sum(for $p in $paths return number(substring-after($p/@TopLeft, ','))  + number($p/@HeaderHeight)) + $y0" />
+
     <g xmlns="http://www.w3.org/2000/svg">
       <text>
-        <xsl:attribute name="x"><xsl:value-of select="number(substring-before(@TopLeft, ','))"/></xsl:attribute>
-        <xsl:attribute name="y"><xsl:value-of select="number(substring-after(@TopLeft, ',')) + (number(substring-after(@Size, ',')) div 2)"/></xsl:attribute>
+        <xsl:attribute name="x"><xsl:value-of select="number($x)"/></xsl:attribute>
+        <xsl:attribute name="y"><xsl:value-of select="number($x) + (number(substring-after(@Size, ',')) div 2)"/></xsl:attribute>
         <xsl:attribute name="fill">black</xsl:attribute>
         <xsl:attribute name="font-family">Verdana</xsl:attribute>
         <xsl:attribute name="font-size">12</xsl:attribute>
@@ -273,8 +290,8 @@
       </text>
 
       <rect>
-        <xsl:attribute name="x"><xsl:value-of select="substring-before(@TopLeft, ',')"/></xsl:attribute>
-        <xsl:attribute name="y"><xsl:value-of select="substring-after(@TopLeft, ',')"/></xsl:attribute>
+        <xsl:attribute name="x"><xsl:value-of select="number($x)"/></xsl:attribute>
+        <xsl:attribute name="y"><xsl:value-of select="number($y)"/></xsl:attribute>
         <xsl:attribute name="width"><xsl:value-of select="substring-before(@Size, ',')"/></xsl:attribute>
         <xsl:attribute name="height"><xsl:value-of select="substring-after(@Size, ',')"/></xsl:attribute>
         <xsl:attribute name="fill">none</xsl:attribute>

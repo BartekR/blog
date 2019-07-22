@@ -26,12 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">THOR</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAA7cFFKP+BEaL2ICxxtQ5mAAAAAACAAAAAAAQZgAAAAEAACAAAADTbpFireZerT8XJ94DwZsjx26zjn8Zosu1b8hSsY/GEQAAAAAOgAAAAAIAACAAAABF9XIa9VT7NGEVkzYI+mx0nniidM2ZxxmMZ1ERPFwfkpAAAABdWPY8ybGd1Ir75lAQy/SutvE5zGDNLmVGqXSaQxyX7lEeP43eLWEo8UB+tyNtKTQ4AAt/ycgSUB7+DU4S++Oihyn+0Ob99mojz3Cp93ODkNVR4F+ZcJuPSqIyEhz8i5lv41Jme9xJc6yALXdY4SDFftD9Qg9EgaggTFvdKOr3+ctsOucKtxLvTdAFzFgCxkVAAAAAdlkb5lZTDdf19HWNNqHan5qWcJFekt1Dv5RE3MYgnio9a14jGjSayeI5HzKpC9qd8lOQ7GAfyJAe/1WbJdvaSg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAA7cFFKP+BEaL2ICxxtQ5mAAAAAACAAAAAAAQZgAAAAEAACAAAACsE1lww/dBDBykz8opDDxtdugVPhGWghgt8ctdvG0+DgAAAAAOgAAAAAIAACAAAADi7KRsjNYB3/yUgMDNvwwIgtuJF7gLk6Th2GhtfsrJjJAAAABpJ4ngbjemccBkFS9cY7+ByQXfO2+EohoxCnBQIgT8ENXpVtUlEwexzVMrcAuDxUCnA2mUW5pRPtjT8c7Iuwdo9+r1W8RTtNgiWqldGqYPxR9Zcd7CgOj0LGyFoW53DkB8suDlGvqlGklkK54XV9R3zFW2WC5SgCdCIygl/83pdUuoFnsOIotaeMjAizg00XNAAAAAXl0R5kMTpbdGIEmuE/Dh2yd1WhU0qYJwzhXBH5BLOWgT0sZswIQpWcvqH5QfIi8RwQHib+rdelryxhIIpOzIrw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Package.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Empty.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Sequences.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -64,6 +65,23 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{B7BE0508-23F8-4620-951A-8202F0BC4241}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Sequences.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{0085196A-80D5-4244-A604-9FB5BFC814D9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Sequences</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CB1CE335-B7E7-45C5-AD37-4A6985B580EE}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
