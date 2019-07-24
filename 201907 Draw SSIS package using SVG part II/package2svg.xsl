@@ -262,7 +262,7 @@
 
   <xsl:template match="gl:AnnotationLayout">
 
-    <xsl:variable name="IdTokens" select="tokenize(@Id, '\\')" />
+    <xsl:variable name="IdTokens" select="tokenize(@ParentId, '\\')" />
     <!-- get all possible @Id combinations for parent sequences -->
     <xsl:variable name="IdPaths" select="for $x in (2 to count($IdTokens)) return string-join(subsequence($IdTokens, 1, $x), '\')" />
 
@@ -282,7 +282,7 @@
     <g xmlns="http://www.w3.org/2000/svg">
       <text>
         <xsl:attribute name="x"><xsl:value-of select="number($x)"/></xsl:attribute>
-        <xsl:attribute name="y"><xsl:value-of select="number($x) + (number(substring-after(@Size, ',')) div 2)"/></xsl:attribute>
+        <xsl:attribute name="y"><xsl:value-of select="number($y) + (number(substring-after(@Size, ',')) div 2)"/></xsl:attribute>
         <xsl:attribute name="fill">black</xsl:attribute>
         <xsl:attribute name="font-family">Verdana</xsl:attribute>
         <xsl:attribute name="font-size">12</xsl:attribute>
