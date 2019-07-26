@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrecedenceConstraints xmlns:DTS="www.microsoft.com/SqlServer/Dts">
+   <DTS:PrecedenceConstraint DTS:refId="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint]"
+                             DTS:CreationName=""
+                             DTS:DTSID="{CBA8E7C2-488C-42B0-A938-F2AED37DAF65}"
+                             DTS:EvalOp="1"
+                             DTS:Expression="@[User::j] &lt; 10"
+                             DTS:From="Package\SEQC MAIN\FLC Tree\EXPR @j"
+                             DTS:LogicalAnd="True"
+                             DTS:ObjectName="Constraint"
+                             DTS:To="Package\SEQC MAIN\FLC Tree\DFT Tree True"/>
+   <DTS:PrecedenceConstraint DTS:refId="Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint 1]"
+                             DTS:CreationName=""
+                             DTS:Description="@j &gt;= 10"
+                             DTS:DTSID="{1A85A7BD-B655-435C-AAED-A7F245524549}"
+                             DTS:EvalOp="1"
+                             DTS:Expression="@[User::j] &gt;= 10"
+                             DTS:From="Package\SEQC MAIN\FLC Tree\EXPR @j"
+                             DTS:LogicalAnd="True"
+                             DTS:ObjectName="Constraint 1"
+                             DTS:To="Package\SEQC MAIN\FLC Tree\DFT Tree False"/>
+   <DTS:PrecedenceConstraint DTS:refId="Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint]"
+                             DTS:CreationName=""
+                             DTS:DTSID="{7142B233-2B84-4B72-A7ED-FA2C18FEE110}"
+                             DTS:From="Package\SEQC MAIN\SEQC Serial\DFT Serial 1"
+                             DTS:LogicalAnd="True"
+                             DTS:ObjectName="Constraint"
+                             DTS:To="Package\SEQC MAIN\SEQC Serial\DFT Serial 2"
+                             DTS:Value="2"/>
+   <DTS:PrecedenceConstraint DTS:refId="Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 1]"
+                             DTS:CreationName=""
+                             DTS:DTSID="{D8610F91-DF6E-45B7-BC2A-77D71A868C31}"
+                             DTS:From="Package\SEQC MAIN\SEQC Serial\DFT Serial 2"
+                             DTS:LogicalAnd="True"
+                             DTS:ObjectName="Constraint 1"
+                             DTS:To="Package\SEQC MAIN\SEQC Serial\DFT Serial 3"/>
+   <DTS:PrecedenceConstraint DTS:refId="Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 2]"
+                             DTS:CreationName=""
+                             DTS:DTSID="{2E52A779-7F8A-4A16-ACD2-7691E67447E4}"
+                             DTS:From="Package\SEQC MAIN\SEQC Serial\DFT Serial 3"
+                             DTS:ObjectName="Constraint 2"
+                             DTS:To="Package\SEQC MAIN\SEQC Serial\DFT Serial 4"
+                             DTS:Value="1"/>
+</PrecedenceConstraints>

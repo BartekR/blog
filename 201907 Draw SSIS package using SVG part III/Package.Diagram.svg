@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+     xmlns:gl="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph"
+     xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph"
+     xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph"
+     xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+     viewBox="0 0 2100 600">
+   <rect width="100%" height="100%" fill="lightgray"/>
+   <!--Package\SEQC MAIN\FELC Parallel-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel-->
+   <!--5.50000000000023,5.5-->
+   <g>
+      <rect x="11.00000000000046"
+            y="207.5"
+            rx="3"
+            ry="3"
+            width="780"
+            height="163"
+            fill="none"
+            stroke="black"
+            stroke-width="1"/>
+      <rect x="11.00000000000046"
+            y="207.5"
+            rx="3"
+            ry="3"
+            width="780"
+            height="43"
+            fill="white"
+            stroke="green"
+            stroke-width="1"/>
+      <text x="16.000000000000462"
+            y="235"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">FELC Parallel</text>
+   </g>
+   <!--Package\SEQC MAIN\FLC Tree-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree-->
+   <!--5.50000000000023,5.5-->
+   <g>
+      <rect x="852.0000000000002"
+            y="165"
+            rx="3"
+            ry="3"
+            width="370"
+            height="248"
+            fill="none"
+            stroke="black"
+            stroke-width="1"/>
+      <rect x="852.0000000000002"
+            y="165"
+            rx="3"
+            ry="3"
+            width="370"
+            height="43"
+            fill="white"
+            stroke="green"
+            stroke-width="1"/>
+      <text x="857.0000000000002"
+            y="192.5"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">FLC Tree</text>
+   </g>
+   <!--Package\SEQC MAIN\SEQC Serial-->
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
+   <!--5.50000000000023,5.5-->
+   <g>
+      <rect x="1283.0000000000002"
+            y="53.99999999999977"
+            rx="3"
+            ry="3"
+            width="356"
+            height="470"
+            fill="none"
+            stroke="black"
+            stroke-width="1"/>
+      <rect x="1283.0000000000002"
+            y="53.99999999999977"
+            rx="3"
+            ry="3"
+            width="356"
+            height="43"
+            fill="white"
+            stroke="green"
+            stroke-width="1"/>
+      <text x="1288.0000000000002"
+            y="81.49999999999977"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">SEQC Serial</text>
+   </g>
+   <!--Package\SEQC MAIN-->
+   <!--Package\SEQC MAIN-->
+   <!--0,0-->
+   <g>
+      <rect x="5.50000000000023"
+            y="5.5"
+            rx="3"
+            ry="3"
+            width="1854"
+            height="573"
+            fill="none"
+            stroke="black"
+            stroke-width="1"/>
+      <rect x="5.50000000000023"
+            y="5.5"
+            rx="3"
+            ry="3"
+            width="1854"
+            height="43"
+            fill="white"
+            stroke="green"
+            stroke-width="1"/>
+      <text x="10.500000000000231"
+            y="33"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">SEQC MAIN</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel:Package\SEQC MAIN\FELC Parallel\EPT Parallel 1-->
+   <g>
+      <rect x="16.500000000000462"
+            y="265"
+            rx="5"
+            ry="5"
+            width="143"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="21.500000000000462"
+            y="293"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">EPT Parallel 1</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel:Package\SEQC MAIN\FELC Parallel\EPT Parallel 2-->
+   <g>
+      <rect x="220.50000000000045"
+            y="264.9999999999999"
+            rx="5"
+            ry="5"
+            width="143"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="225.50000000000045"
+            y="292.9999999999999"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">EPT Parallel 2</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel:Package\SEQC MAIN\FELC Parallel\EPT Parallel 3-->
+   <g>
+      <rect x="424.50000000000045"
+            y="264.9999999999999"
+            rx="5"
+            ry="5"
+            width="143"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="429.50000000000045"
+            y="292.9999999999999"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">EPT Parallel 3</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree:Package\SEQC MAIN\FLC Tree\DFT Tree False-->
+   <g>
+      <rect x="1066.5000000000002"
+            y="315.5"
+            rx="5"
+            ry="5"
+            width="150"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="1071.5000000000002"
+            y="343.5"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">DFT Tree False</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree:Package\SEQC MAIN\FLC Tree\DFT Tree True-->
+   <g>
+      <rect x="857.5000000000002"
+            y="315.5"
+            rx="5"
+            ry="5"
+            width="148"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="862.5000000000002"
+            y="343.5"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">DFT Tree True</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree:Package\SEQC MAIN\FLC Tree\EXPR @j-->
+   <g>
+      <rect x="1081.5000000000002"
+            y="213.5"
+            rx="5"
+            ry="5"
+            width="120"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="1086.5000000000002"
+            y="241.5"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">EXPR @j</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 1-->
+   <g>
+      <rect x="1288.5000000000002"
+            y="102.49999999999977"
+            rx="5"
+            ry="5"
+            width="136"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="1293.5000000000002"
+            y="130.49999999999977"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">DFT Serial 1</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 2-->
+   <g>
+      <rect x="1288.5000000000002"
+            y="204.49999999999977"
+            rx="5"
+            ry="5"
+            width="136"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="1293.5000000000002"
+            y="232.49999999999977"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">DFT Serial 2</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 3-->
+   <g>
+      <rect x="1288.5000000000002"
+            y="306.4999999999998"
+            rx="5"
+            ry="5"
+            width="136"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="1293.5000000000002"
+            y="334.4999999999998"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">DFT Serial 3</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial:Package\SEQC MAIN\SEQC Serial\DFT Serial 4-->
+   <g>
+      <rect x="1288.5000000000002"
+            y="417.4999999999998"
+            rx="5"
+            ry="5"
+            width="136"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="1293.5000000000002"
+            y="445.4999999999998"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">DFT Serial 4</text>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree-->
+   <!--Package\SEQC MAIN\FLC Tree*Package\SEQC MAIN-->
+   <g><!--element: Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint]--><!--offsetX: 852.0000000000002--><!--offsetY: 208-->
+      <line x1="1122.8333333333333"
+            y1="255.5"
+            style="stroke:#006600"
+            x2="1122.8333333333333"
+            y2="275.9736842105263"/>
+      <path d="M1122.8333333333333,275.9736842105263 Q1122.8333333333333,279.9736842105263 1118.8333333333333,279.9736842105263"
+            style="stroke:#006600; fill:none"/>
+      <line x1="1118.8333333333333"
+            y1="279.9736842105263"
+            style="stroke:#006600"
+            x2="935.5000000000002"
+            y2="279.9736842105263"/>
+      <path d="M935.5000000000002,279.9736842105263 Q931.5000000000002,279.9736842105263 931.5000000000002,283.9736842105263"
+            style="stroke:#006600; fill:none"/>
+      <line x1="931.5000000000002"
+            y1="283.9736842105263"
+            style="stroke:#006600"
+            x2="931.5000000000002"
+            y2="308"/>
+      <polygon points="928.5000000000002,308 934.5000000000002,308 931.5000000000002,315.5"
+               style="stroke:#006600; fill:#006600"/>
+      <!--@Id: Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint]-->
+      <!--ConstraintOptions-->
+      <!--1-->
+      <!--{CBA8E7C2-488C-42B0-A938-F2AED37DAF65}-->
+      <rect x="946.2848111979163"
+            y="284.9736842105263"
+            width="161.7637109375"
+            height="16"
+            fill="none"
+            stroke="red"
+            stroke-width="1"/>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FLC Tree-->
+   <!--Package\SEQC MAIN\FLC Tree*Package\SEQC MAIN-->
+   <g><!--element: Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint 1]--><!--offsetX: 852.0000000000002--><!--offsetY: 208-->
+      <line x1="1160.1666666666672"
+            y1="255.5"
+            style="stroke:#006600"
+            x2="1160.1666666666672"
+            y2="275.9736842105263"/>
+      <path d="M1160.1666666666672,275.9736842105263 Q1160.1666666666672,279.9736842105263 1156.1666666666672,279.9736842105263"
+            style="stroke:#006600; fill:none"/>
+      <line x1="1156.1666666666672"
+            y1="279.9736842105263"
+            style="stroke:#006600"
+            x2="1145.5000000000007"
+            y2="279.9736842105263"/>
+      <path d="M1145.5000000000007,279.9736842105263 Q1141.5000000000007,279.9736842105263 1141.5000000000007,283.9736842105263"
+            style="stroke:#006600; fill:none"/>
+      <line x1="1141.5000000000007"
+            y1="283.9736842105263"
+            style="stroke:#006600"
+            x2="1141.5000000000007"
+            y2="308"/>
+      <polygon points="1138.5000000000007,308 1144.5000000000007,308 1141.5000000000007,315.5"
+               style="stroke:#006600; fill:#006600"/>
+      <!--@Id: Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint 1]-->
+      <!--ConstraintDescription-->
+      <!--1-->
+      <!--{1A85A7BD-B655-435C-AAED-A7F245524549}-->
+      <rect x="1119.711477864584"
+            y="284.9736842105263"
+            width="62.2437109375"
+            height="16"
+            fill="none"
+            stroke="red"
+            stroke-width="1"/>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
+   <!--Package\SEQC MAIN\SEQC Serial*Package\SEQC MAIN-->
+   <g><!--element: Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint]--><!--offsetX: 1283.0000000000002--><!--offsetY: 96.99999999999977-->
+      <line x1="1356.5000000000002"
+            y1="144.49999999999977"
+            style="stroke:#006600"
+            x2="1356.5000000000002"
+            y2="196.99999999999977"/>
+      <polygon points="1353.5000000000002,196.99999999999977 1359.5000000000002,196.99999999999977 1356.5000000000002,204.49999999999977"
+               style="stroke:#006600; fill:#006600"/>
+      <!--@Id: Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint]-->
+      <!---->
+      <!--0-->
+      <!--{7142B233-2B84-4B72-A7ED-FA2C18FEE110}-->
+      <rect x="1331.1955468750002"
+            y="164.94531249999977"
+            width="50.60890625"
+            height="11.609375"
+            fill="none"
+            stroke="red"
+            stroke-width="1"/>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
+   <!--Package\SEQC MAIN\SEQC Serial*Package\SEQC MAIN-->
+   <g><!--element: Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 1]--><!--offsetX: 1283.0000000000002--><!--offsetY: 96.99999999999977-->
+      <line x1="1356.5000000000002"
+            y1="246.49999999999977"
+            style="stroke:#006600"
+            x2="1356.5000000000002"
+            y2="298.9999999999998"/>
+      <polygon points="1353.5000000000002,298.9999999999998 1359.5000000000002,298.9999999999998 1356.5000000000002,306.4999999999998"
+               style="stroke:#006600; fill:#006600"/>
+      <!--@Id: Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 1]-->
+      <!---->
+      <!--0-->
+      <!--{D8610F91-DF6E-45B7-BC2A-77D71A868C31}-->
+      <rect x="NaN"
+            y="NaN"
+            width="NaN"
+            height="NaN"
+            fill="none"
+            stroke="red"
+            stroke-width="1"/>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
+   <!--Package\SEQC MAIN\SEQC Serial*Package\SEQC MAIN-->
+   <g><!--element: Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 2]--><!--offsetX: 1283.0000000000002--><!--offsetY: 96.99999999999977-->
+      <line x1="1356.5000000000002"
+            y1="348.4999999999998"
+            style="stroke:#006600"
+            x2="1356.5000000000002"
+            y2="409.9999999999998"/>
+      <polygon points="1353.5000000000002,409.9999999999998 1359.5000000000002,409.9999999999998 1356.5000000000002,417.4999999999998"
+               style="stroke:#006600; fill:#006600"/>
+      <!--@Id: Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 2]-->
+      <!---->
+      <!--0-->
+      <!--{2E52A779-7F8A-4A16-ACD2-7691E67447E4}-->
+      <rect x="1341.2586523437503"
+            y="374.3754882812498"
+            width="30.4826953125"
+            height="9.7490234375"
+            fill="none"
+            stroke="red"
+            stroke-width="1"/>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\FELC Parallel-->
+   <g>
+      <text x="628.5000000000005"
+            y="285.9999999999999"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">Annotation FELC Parallel</text>
+      <rect x="628.5000000000005"
+            y="255.9999999999999"
+            width="157"
+            height="60"
+            fill="none"
+            stroke="black"
+            stroke-width="1"/>
+   </g>
+   <!--Package\SEQC MAIN:Package\SEQC MAIN\SEQC Serial-->
+   <g>
+      <text x="1485.5000000000002"
+            y="438.4999999999998"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">Annotation FELC Serial</text>
+      <rect x="1485.5000000000002"
+            y="408.4999999999998"
+            width="148"
+            height="60"
+            fill="none"
+            stroke="black"
+            stroke-width="1"/>
+   </g>
+   <!--Package\SEQC MAIN-->
+   <g>
+      <text x="1700.0000000000002"
+            y="289"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">Annotation SEQC MAIN</text>
+      <rect x="1700.0000000000002"
+            y="259"
+            width="154"
+            height="60"
+            fill="none"
+            stroke="black"
+            stroke-width="1"/>
+   </g>
+   <!---->
+   <g>
+      <text x="1920"
+            y="292"
+            fill="black"
+            font-family="Verdana"
+            font-size="12">Annotation Package</text>
+      <rect x="1920"
+            y="262"
+            width="135"
+            height="60"
+            fill="none"
+            stroke="black"
+            stroke-width="1"/>
+   </g>
+</svg>
