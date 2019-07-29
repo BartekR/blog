@@ -7,7 +7,7 @@ Uwagi do wpisu
 - `New-Diagram.ps1` - pierwsze podejście do pobierania diagramu z pliku `.dtsx`; kolejne kroki
   - `Select-Xml -Path $pkgPath -XPath $xpath -Namespace $namespace` - pobieram z pliku interesujący mnie fragment w przestrzeni nazw
   - `Select-Object -ExpandProperty Node` - stamtąd pobieram właściwość Node
-- `.Value` - z całości biorę wartość
+  - `.Value` - z całości biorę wartość
   - `Out-File $outFile` - i wyrzucam do pliku
 - Dodaję obsługę opisów w `EdgeLayout.Labels/mssgm:EdgeLabel`
   - Parametr `@BoundingBox` wg dokumentacji zawiera wierzchołki prostokąta definiującego ramy dla opisu, w rzeczywistości są to wartości `x`, `y`, `width`, `height`, które można wykorzystać od razu dla `<rect />`
