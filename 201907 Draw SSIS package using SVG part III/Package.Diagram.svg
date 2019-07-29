@@ -313,10 +313,7 @@
             y2="308"/>
       <polygon points="928.5000000000002,308 934.5000000000002,308 931.5000000000002,315.5"
                style="stroke:#006600; fill:#006600"/>
-      <!--@Id: Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint]-->
-      <!--ConstraintOptions-->
-      <!--1-->
-      <!--{CBA8E7C2-488C-42B0-A938-F2AED37DAF65}-->
+      <!--$annotationType: ConstraintOptions | $precedenceConstraintValue: 1 and @[User::j] < 10-->
       <rect x="946.2848111979163"
             y="284.9736842105263"
             width="161.7637109375"
@@ -349,10 +346,7 @@
             y2="308"/>
       <polygon points="1138.5000000000007,308 1144.5000000000007,308 1141.5000000000007,315.5"
                style="stroke:#006600; fill:#006600"/>
-      <!--@Id: Package\SEQC MAIN\FLC Tree.PrecedenceConstraints[Constraint 1]-->
-      <!--ConstraintDescription-->
-      <!--1-->
-      <!--{1A85A7BD-B655-435C-AAED-A7F245524549}-->
+      <!--$annotationType: ConstraintDescription | $precedenceConstraintValue: @j >= 10-->
       <rect x="1119.711477864584"
             y="284.9736842105263"
             width="62.2437109375"
@@ -371,10 +365,7 @@
             y2="196.99999999999977"/>
       <polygon points="1353.5000000000002,196.99999999999977 1359.5000000000002,196.99999999999977 1356.5000000000002,204.49999999999977"
                style="stroke:#006600; fill:#006600"/>
-      <!--@Id: Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint]-->
-      <!---->
-      <!--0-->
-      <!--{7142B233-2B84-4B72-A7ED-FA2C18FEE110}-->
+      <!--$annotationType:  | $precedenceConstraintValue: -->
       <rect x="1331.1955468750002"
             y="164.94531249999977"
             width="50.60890625"
@@ -393,10 +384,7 @@
             y2="298.9999999999998"/>
       <polygon points="1353.5000000000002,298.9999999999998 1359.5000000000002,298.9999999999998 1356.5000000000002,306.4999999999998"
                style="stroke:#006600; fill:#006600"/>
-      <!--@Id: Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 1]-->
-      <!---->
-      <!--0-->
-      <!--{D8610F91-DF6E-45B7-BC2A-77D71A868C31}-->
+      <!--$annotationType:  | $precedenceConstraintValue: -->
       <rect x="NaN"
             y="NaN"
             width="NaN"
@@ -415,10 +403,7 @@
             y2="409.9999999999998"/>
       <polygon points="1353.5000000000002,409.9999999999998 1359.5000000000002,409.9999999999998 1356.5000000000002,417.4999999999998"
                style="stroke:#006600; fill:#006600"/>
-      <!--@Id: Package\SEQC MAIN\SEQC Serial.PrecedenceConstraints[Constraint 2]-->
-      <!---->
-      <!--0-->
-      <!--{2E52A779-7F8A-4A16-ACD2-7691E67447E4}-->
+      <!--$annotationType:  | $precedenceConstraintValue: -->
       <rect x="1341.2586523437503"
             y="374.3754882812498"
             width="30.4826953125"

@@ -266,14 +266,25 @@
         <!-- rectangle with precedence constraint's text (for testing) -->
         <xsl:variable name="BoundingBox" select="tokenize(gl:EdgeLayout.Labels/mssgm:EdgeLabel/@BoundingBox, ',')" />
 
-        <!--  -->
-        <xsl:comment><xsl:value-of select="concat('@Id: ', @Id)" /></xsl:comment>
-        <xsl:comment><xsl:value-of select="/Objects/PrecedenceConstraint[@design-time-name=$localId]/ShowAnnotation" /></xsl:comment>
-        <xsl:comment><xsl:value-of select="count(/Objects/PrecedenceConstraint[@design-time-name=$localId])" /></xsl:comment>
+        <!-- text for the precedence constraint -->
+        <xsl:variable name="annotationType" select="/Objects/PrecedenceConstraint[@design-time-name=$localId]/ShowAnnotation" />
 
-        <xsl:variable name="precedenceConstraint" select="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:DTSID"></xsl:variable>
-        <xsl:comment><xsl:value-of select="$precedenceConstraint" /></xsl:comment>
-        
+        <xsl:variable name="precedenceConstraintValue">
+          <xsl:choose>
+            <xsl:when test="$annotationType eq 'ConstraintOptions'">
+              <xsl:value-of select="concat(
+                                      $packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:EvalOp,
+                                      ' and ',
+                                      $packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Expression
+                                    )
+              " />
+            </xsl:when>
+            <xsl:when test="$annotationType eq 'ConstraintDescription'"><xsl:value-of select="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Description" /></xsl:when>
+            <xsl:when test="$annotationType eq 'ConstraintName'"><xsl:value-of select="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:ObjectName" /></xsl:when>
+            <!-- <xsl:when test="$annotationType -eq 'AsNeeded'"></xsl:when> -->
+          </xsl:choose>
+        </xsl:variable>
+        <xsl:comment><xsl:value-of select="concat('$annotationType: ', $annotationType, ' | $precedenceConstraintValue: ', $precedenceConstraintValue)" /></xsl:comment>
 
         <rect>
           <xsl:attribute name="x"><xsl:value-of select="number($x) + number($BoundingBox[1])"/></xsl:attribute>
