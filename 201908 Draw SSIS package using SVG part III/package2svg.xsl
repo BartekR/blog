@@ -100,7 +100,7 @@
             <xsl:attribute name="x"><xsl:value-of select="number($x) + 5"/></xsl:attribute>
             <xsl:attribute name="y"><xsl:value-of select="number($y) + number(@HeaderHeight) div 2 +  6"/></xsl:attribute>
             <xsl:attribute name="fill">black</xsl:attribute>
-            <xsl:attribute name="font-family">Verdana</xsl:attribute>
+            <xsl:attribute name="font-family">Tahoma</xsl:attribute>
             <xsl:attribute name="font-size">12</xsl:attribute>
             <xsl:value-of select="$IdTokens[last()]"/>
         </text>
@@ -147,7 +147,7 @@
             <xsl:attribute name="x"><xsl:value-of select="number($x) + 5"/></xsl:attribute>
             <xsl:attribute name="y"><xsl:value-of select="number($y) + (number(substring-after(@Size, ',')) div 2) + 7"/></xsl:attribute>
             <xsl:attribute name="fill">black</xsl:attribute>
-            <xsl:attribute name="font-family">Verdana</xsl:attribute>
+            <xsl:attribute name="font-family">Tahoma</xsl:attribute>
             <xsl:attribute name="font-size">12</xsl:attribute>
             <xsl:value-of select="$IdTokens[last()]"/>
         </text>
@@ -182,6 +182,14 @@
     <xsl:variable name="x" select="sum(for $p in $paths return number(substring-before($p/@TopLeft, ','))) + $x0" />
     <xsl:variable name="y" select="sum(for $p in $paths return number(substring-after($p/@TopLeft, ','))  + number($p/@HeaderHeight)) + $y0" />
 
+    <!-- the color of the edge depends on DTS:Value -->
+    <xsl:variable name="lineColor">
+      <xsl:choose>
+        <xsl:when test="count($packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value) = 0">#006600</xsl:when> <!-- Success -->
+        <xsl:when test="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value = 1">#dd0000</xsl:when><!-- Failure -->
+        <xsl:when test="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value = 2">#000000</xsl:when><!-- Completion -->
+      </xsl:choose>
+    </xsl:variable>
     
     <g xmlns="http://www.w3.org/2000/svg">
 
@@ -196,9 +204,12 @@
             <line>
               <xsl:attribute name="x1"><xsl:value-of select="number($x)"/></xsl:attribute>
               <xsl:attribute name="y1"><xsl:value-of select="number($y)"/></xsl:attribute>
-              <xsl:attribute name="style">stroke:#006600</xsl:attribute>
+              <xsl:attribute name="style">stroke:<xsl:value-of select="$lineColor" />; stroke-width: 2px;</xsl:attribute>
               <xsl:attribute name="x2"><xsl:value-of select="number($x) + number(substring-before(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:LineSegment[1]/@End, ','))"/></xsl:attribute>
               <xsl:attribute name="y2"><xsl:value-of select="number($y) + number(substring-after(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:LineSegment[1]/@End, ','))"/></xsl:attribute>
+              <xsl:if test="count($packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:LogicalAnd) = 0">
+                <xsl:attribute name="stroke-dasharray">5</xsl:attribute>
+              </xsl:if>
             </line>
 
             <path>
@@ -209,15 +220,18 @@
                   <xsl:text> </xsl:text>
                   <xsl:value-of select="concat(number($x) + number(substring-before(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:CubicBezierSegment[1]/@Point3, ',')), ',', number($y) + number(substring-after(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:CubicBezierSegment[1]/@Point3, ',')))"/> 
               </xsl:attribute>
-              <xsl:attribute name="style">stroke:#006600; fill:none</xsl:attribute>
+              <xsl:attribute name="style">stroke:<xsl:value-of select="$lineColor" />; fill:none; stroke-width: 2px;</xsl:attribute>
             </path>
 
             <line>
               <xsl:attribute name="x1"><xsl:value-of select="number($x) + number(substring-before(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:CubicBezierSegment[1]/@Point3, ','))"/></xsl:attribute>
               <xsl:attribute name="y1"><xsl:value-of select="number($y) + number(substring-after(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:CubicBezierSegment[1]/@Point3, ','))"/></xsl:attribute>
-              <xsl:attribute name="style">stroke:#006600</xsl:attribute>
+              <xsl:attribute name="style">stroke:<xsl:value-of select="$lineColor" />; stroke-width: 2px;</xsl:attribute>
               <xsl:attribute name="x2"><xsl:value-of select="number($x) + number(substring-before(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:LineSegment[2]/@End, ','))"/></xsl:attribute>
               <xsl:attribute name="y2"><xsl:value-of select="number($y) + number(substring-after(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:LineSegment[2]/@End, ','))"/></xsl:attribute>
+              <xsl:if test="count($packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:LogicalAnd) = 0">
+                <xsl:attribute name="stroke-dasharray">5</xsl:attribute>
+              </xsl:if>
             </line>
 
             <path>
@@ -228,15 +242,18 @@
                   <xsl:text> </xsl:text>
                   <xsl:value-of select="concat(number($x) + number(substring-before(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:CubicBezierSegment[2]/@Point3, ',')), ',', number($y) + number(substring-after(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:CubicBezierSegment[2]/@Point3, ',')))"/> 
               </xsl:attribute>
-              <xsl:attribute name="style">stroke:#006600; fill:none</xsl:attribute>
+              <xsl:attribute name="style">stroke:<xsl:value-of select="$lineColor" />; fill:none; stroke-width: 2px;</xsl:attribute>
             </path>
 
             <line>
               <xsl:attribute name="x1"><xsl:value-of select="number($x) + number(substring-before(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:CubicBezierSegment[2]/@Point3, ','))"/></xsl:attribute>
               <xsl:attribute name="y1"><xsl:value-of select="number($y) + number(substring-after(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:CubicBezierSegment[2]/@Point3, ','))"/></xsl:attribute>
-              <xsl:attribute name="style">stroke:#006600</xsl:attribute>
+              <xsl:attribute name="style">stroke:<xsl:value-of select="$lineColor" />; stroke-width: 2px;</xsl:attribute>
               <xsl:attribute name="x2"><xsl:value-of select="number($x) + number(substring-before(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:LineSegment[3]/@End, ','))"/></xsl:attribute>
               <xsl:attribute name="y2"><xsl:value-of select="number($y) + number(substring-after(gl:EdgeLayout.Curve/mssgle:Curve/mssgle:Curve.Segments/mssgle:SegmentCollection/mssgle:LineSegment[3]/@End, ','))"/></xsl:attribute>
+              <xsl:if test="count($packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:LogicalAnd) = 0">
+                <xsl:attribute name="stroke-dasharray">5</xsl:attribute>
+              </xsl:if>
             </line>
           </xsl:when>
 
@@ -245,9 +262,12 @@
             <line>
                 <xsl:attribute name="x1"><xsl:value-of select="number($x)"/></xsl:attribute>
                 <xsl:attribute name="y1"><xsl:value-of select="number($y)"/></xsl:attribute>
-                <xsl:attribute name="style">stroke:#006600</xsl:attribute>
+                <xsl:attribute name="style">stroke:<xsl:value-of select="$lineColor" />; stroke-width: 2px;</xsl:attribute>
                 <xsl:attribute name="x2"><xsl:value-of select="number($x) + number(substring-before(gl:EdgeLayout.Curve/mssgle:Curve/@End, ','))"/></xsl:attribute>
                 <xsl:attribute name="y2"><xsl:value-of select="number($y) + number(substring-after(gl:EdgeLayout.Curve/mssgle:Curve/@End, ','))"/></xsl:attribute>
+                <xsl:if test="count($packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:LogicalAnd) = 0">
+                  <xsl:attribute name="stroke-dasharray">5</xsl:attribute>
+                </xsl:if>
             </line>
           </xsl:otherwise>
         </xsl:choose>
@@ -260,41 +280,85 @@
               <xsl:text> </xsl:text>
               <xsl:value-of select="number($x) + number(substring-before(gl:EdgeLayout.Curve/mssgle:Curve/@EndConnector, ','))"/>,<xsl:value-of select="number($y) + number(substring-after(gl:EdgeLayout.Curve/mssgle:Curve/@EndConnector, ','))"/>
           </xsl:attribute>
-          <xsl:attribute name="style">stroke:#006600; fill:#006600</xsl:attribute>
+          <xsl:attribute name="style">stroke:<xsl:value-of select="$lineColor" />; fill:<xsl:value-of select="$lineColor" /></xsl:attribute>
         </polygon>
 
-        <!-- rectangle with precedence constraint's text (for testing) -->
-        <xsl:variable name="BoundingBox" select="tokenize(gl:EdgeLayout.Labels/mssgm:EdgeLabel/@BoundingBox, ',')" />
+        <!-- if there is a @BoundingBox attribute, then there is a text for the constraint; draw it -->
+        <xsl:if test="count(gl:EdgeLayout.Labels/mssgm:EdgeLabel/@BoundingBox) gt 0">
 
-        <!-- text for the precedence constraint -->
-        <xsl:variable name="annotationType" select="/Objects/PrecedenceConstraint[@design-time-name=$localId]/ShowAnnotation" />
+          <!-- rectangle with precedence constraint's text (for testing) -->
+          <xsl:variable name="BoundingBox" select="tokenize(gl:EdgeLayout.Labels/mssgm:EdgeLabel/@BoundingBox, ',')" />
 
-        <xsl:variable name="precedenceConstraintValue">
-          <xsl:choose>
-            <xsl:when test="$annotationType eq 'ConstraintOptions'">
-              <xsl:value-of select="concat(
-                                      $packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:EvalOp,
-                                      ' and ',
-                                      $packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Expression
-                                    )
-              " />
-            </xsl:when>
-            <xsl:when test="$annotationType eq 'ConstraintDescription'"><xsl:value-of select="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Description" /></xsl:when>
-            <xsl:when test="$annotationType eq 'ConstraintName'"><xsl:value-of select="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:ObjectName" /></xsl:when>
-            <!-- <xsl:when test="$annotationType -eq 'AsNeeded'"></xsl:when> -->
-          </xsl:choose>
-        </xsl:variable>
-        <xsl:comment><xsl:value-of select="concat('$annotationType: ', $annotationType, ' | $precedenceConstraintValue: ', $precedenceConstraintValue)" /></xsl:comment>
+          <!-- text for the precedence constraint -->
+          <xsl:variable name="annotationType" select="/Objects/PrecedenceConstraint[@design-time-name=$localId]/ShowAnnotation" />
 
-        <rect>
-          <xsl:attribute name="x"><xsl:value-of select="number($x) + number($BoundingBox[1])"/></xsl:attribute>
-          <xsl:attribute name="y"><xsl:value-of select="number($y) + number($BoundingBox[2])"/></xsl:attribute>
-          <xsl:attribute name="width"><xsl:value-of select="number($BoundingBox[3])"/></xsl:attribute>
-          <xsl:attribute name="height"><xsl:value-of select="number($BoundingBox[4])"/></xsl:attribute>
-          <xsl:attribute name="fill">none</xsl:attribute>
-          <xsl:attribute name="stroke">red</xsl:attribute>
-          <xsl:attribute name="stroke-width">1</xsl:attribute>
-        </rect>
+          <xsl:variable name="precedenceConstraintValue">
+            <xsl:choose>
+              <xsl:when test="$annotationType eq 'ConstraintOptions'">
+                <xsl:choose>
+                  <xsl:when test="count($packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value) = 0">
+                    <xsl:value-of select="concat('Success and ',
+                                            $packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Expression
+                                          )" />
+                  </xsl:when>
+                  <xsl:when test="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value = 1">
+                    <xsl:value-of select="concat('Failure and ',
+                                            $packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Expression
+                                          )" />
+                  </xsl:when>
+                  <xsl:when test="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value = 2">
+                    <xsl:value-of select="concat('Completion and ',
+                                            $packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Expression
+                                          )" />
+                  </xsl:when>
+                </xsl:choose>
+              </xsl:when>
+              <xsl:when test="$annotationType eq 'ConstraintDescription'"><xsl:value-of select="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Description" /></xsl:when>
+              <xsl:when test="$annotationType eq 'ConstraintName'"><xsl:value-of select="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:ObjectName" /></xsl:when>
+              <!-- <xsl:when test="$annotationType -eq 'AsNeeded'"></xsl:when> -->
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:comment><xsl:value-of select="concat('$annotationType: ', $annotationType, ' | $precedenceConstraintValue: ', $precedenceConstraintValue)" /></xsl:comment>
+
+          <!-- text can also come from the default settings (like: when ConstraintOption == AsNeeded && Value > 0 then Value (Failure, Completion) -->
+          <xsl:variable name="value">
+            <xsl:choose>
+              <xsl:when test="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value = 1">Failure</xsl:when>
+              <xsl:when test="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value = 2">Completion</xsl:when>
+              <!-- Success == 0 and is not set as DTS:Value; Cancelled == 3, but it's a value for execution, not design -->
+            </xsl:choose>
+          </xsl:variable>
+
+          <rect>
+            <xsl:attribute name="x"><xsl:value-of select="number($x) + number($BoundingBox[1])"/></xsl:attribute>
+            <xsl:attribute name="y"><xsl:value-of select="number($y) + number($BoundingBox[2])"/></xsl:attribute>
+            <xsl:attribute name="width"><xsl:value-of select="number($BoundingBox[3])"/></xsl:attribute>
+            <xsl:attribute name="height"><xsl:value-of select="number($BoundingBox[4])"/></xsl:attribute>
+            <xsl:attribute name="fill">none</xsl:attribute>
+            <xsl:attribute name="stroke">red</xsl:attribute>
+            <xsl:attribute name="stroke-width">1</xsl:attribute>
+          </rect>
+
+          <!-- -2 is an arbitrary value, currently for text positioning testing purpose, should be replaced later (and be relative to font size?) -->
+          <text>
+            <xsl:attribute name="x"><xsl:value-of select="number($x) + number($BoundingBox[1])"/></xsl:attribute>
+            <xsl:attribute name="y"><xsl:value-of select="number($y) + number($BoundingBox[2]) + number($BoundingBox[4]) - 2"/></xsl:attribute>
+            <xsl:attribute name="fill">black</xsl:attribute>
+            <xsl:attribute name="font-family">Tahoma</xsl:attribute>
+            <xsl:attribute name="font-size">10</xsl:attribute>
+            <xsl:value-of select="$precedenceConstraintValue"/>
+          </text>
+
+          <text>
+            <xsl:attribute name="x"><xsl:value-of select="number($x) + number($BoundingBox[1])"/></xsl:attribute>
+            <xsl:attribute name="y"><xsl:value-of select="number($y) + number($BoundingBox[2]) + number($BoundingBox[4]) - 2"/></xsl:attribute>
+            <xsl:attribute name="fill">black</xsl:attribute>
+            <xsl:attribute name="font-family">Tahoma</xsl:attribute>
+            <xsl:attribute name="font-size">10</xsl:attribute>
+            <xsl:value-of select="$value"/>
+          </text>
+
+        </xsl:if>
 
     </g>
 
@@ -324,7 +388,7 @@
         <xsl:attribute name="x"><xsl:value-of select="number($x)"/></xsl:attribute>
         <xsl:attribute name="y"><xsl:value-of select="number($y) + (number(substring-after(@Size, ',')) div 2)"/></xsl:attribute>
         <xsl:attribute name="fill">black</xsl:attribute>
-        <xsl:attribute name="font-family">Verdana</xsl:attribute>
+        <xsl:attribute name="font-family">Tahoma</xsl:attribute>
         <xsl:attribute name="font-size">12</xsl:attribute>
         <xsl:value-of select="@Text"/>
       </text>
