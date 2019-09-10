@@ -9,7 +9,7 @@
 
   <!-- passed form commandline, like: %SAXONPATH%\Transform -s:Package.Diagram.xml -xsl:package2svg.xsl -o:Package.Diagram.svg packagePath=DTSX2SVG\Package.dtsx -->
   <xsl:param name="packagePath" as="xs:string" required="yes" />
-  <xsl:variable name="packageContent" select="document($packagePath)" ></xsl:variable>
+  <xsl:variable name="packageContent" select="document($packagePath)" />
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
       
