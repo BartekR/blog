@@ -1,0 +1,205 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/6/2019 4:38:42 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="THOR"
+  DTS:CreatorName="THOR\brata_000"
+  DTS:DTSID="{0085196A-80D5-4244-A604-9FB5BFC814D9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3026.27"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Sequences"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{CB1CE335-B7E7-45C5-AD37-4A6985B580EE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SEQC MAIN"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{3271D73F-0DF5-4E4B-A9D3-DE8E8688C3C7}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SEQC MAIN">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SEQC MAIN\SEQC 01"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{E3D08914-E099-469B-B69A-639972F290CA}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SEQC 01">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\SEQC 01\SEQC 011"
+              DTS:CreationName="STOCK:SEQUENCE"
+              DTS:Description="Sequence Container"
+              DTS:DTSID="{BEE57A03-F252-4CE1-9F5D-65D18199A428}"
+              DTS:ExecutableType="STOCK:SEQUENCE"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="SEQC 011">
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\SEQC MAIN\SEQC 01\SEQC 011\SEQC 0111"
+                  DTS:CreationName="STOCK:SEQUENCE"
+                  DTS:Description="Sequence Container"
+                  DTS:DTSID="{2D6A66BE-568C-4A4A-8D55-2B707B27A0AC}"
+                  DTS:ExecutableType="STOCK:SEQUENCE"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="SEQC 0111">
+                  <DTS:Variables />
+                  <DTS:Executables />
+                </DTS:Executable>
+              </DTS:Executables>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQC MAIN\SEQC 02"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{C860212B-43E9-4F90-B854-0D9E58227A95}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SEQC 02">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\SEQC 02\SEQC 021"
+              DTS:CreationName="STOCK:SEQUENCE"
+              DTS:Description="Sequence Container"
+              DTS:DTSID="{2E98B28B-BF29-43CA-81C1-A0E196D4C7A9}"
+              DTS:ExecutableType="STOCK:SEQUENCE"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="SEQC 021">
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\SEQC MAIN\SEQC 02\SEQC 021\SEQC 0211"
+                  DTS:CreationName="STOCK:SEQUENCE"
+                  DTS:Description="Sequence Container"
+                  DTS:DTSID="{496497F2-84F9-461F-ABC3-3273C9036571}"
+                  DTS:ExecutableType="STOCK:SEQUENCE"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="SEQC 0211">
+                  <DTS:Variables />
+                  <DTS:Executables />
+                </DTS:Executable>
+              </DTS:Executables>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\SEQC MAIN\SEQC 02\SEQC 022"
+              DTS:CreationName="STOCK:SEQUENCE"
+              DTS:Description="Sequence Container"
+              DTS:DTSID="{C6F7DB08-388F-47BA-8853-3C928F616FFB}"
+              DTS:ExecutableType="STOCK:SEQUENCE"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="SEQC 022">
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\SEQC MAIN\SEQC 02\SEQC 022\SEQC 0221"
+                  DTS:CreationName="STOCK:SEQUENCE"
+                  DTS:Description="Sequence Container"
+                  DTS:DTSID="{A14FE573-88C1-4914-8166-831651544C67}"
+                  DTS:ExecutableType="STOCK:SEQUENCE"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="SEQC 0221">
+                  <DTS:Variables />
+                  <DTS:Executables />
+                </DTS:Executable>
+              </DTS:Executables>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,55"
+          Size="205,98"
+          Id="Package\SEQC MAIN\SEQC 01\SEQC 011\SEQC 0111"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="216,158"
+          Size="216,202"
+          Id="Package\SEQC MAIN\SEQC 01\SEQC 011"
+          TopLeft="5.50000000000003,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="227,262"
+          Size="227,306"
+          Id="Package\SEQC MAIN\SEQC 01"
+          TopLeft="5.50000000000006,5.49999999999989" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,55"
+          Size="205,98"
+          Id="Package\SEQC MAIN\SEQC 02\SEQC 021\SEQC 0211"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="216,158"
+          Size="216,202"
+          Id="Package\SEQC MAIN\SEQC 02\SEQC 021"
+          TopLeft="5.50000000000006,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,55"
+          Size="205,98"
+          Id="Package\SEQC MAIN\SEQC 02\SEQC 022\SEQC 0221"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="216,158"
+          Size="216,202"
+          Id="Package\SEQC MAIN\SEQC 02\SEQC 022"
+          TopLeft="282.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="504,262"
+          Size="504,306"
+          Id="Package\SEQC MAIN\SEQC 02"
+          TopLeft="293,5.49999999999989" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="802,366"
+          Size="802,410"
+          Id="Package\SEQC MAIN"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
