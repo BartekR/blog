@@ -383,14 +383,22 @@
     <xsl:variable name="x" select="sum(for $p in $paths return number(substring-before($p/@TopLeft, ','))) + $x0" />
     <xsl:variable name="y" select="sum(for $p in $paths return number(substring-after($p/@TopLeft, ','))  + number($p/@HeaderHeight)) + $y0" />
 
+    <!-- the text for the annotation can contain line endings; I need separatelines then, so I store them in a sequence -->
+    <xsl:variable name="annotationLines" select="tokenize(@Text, '&#xD;&#xA;')" />
+
     <g xmlns="http://www.w3.org/2000/svg">
       <text>
-        <xsl:attribute name="x"><xsl:value-of select="number($x)"/></xsl:attribute>
         <xsl:attribute name="y"><xsl:value-of select="number($y) + (number(substring-after(@Size, ',')) div 2)"/></xsl:attribute>
         <xsl:attribute name="fill">black</xsl:attribute>
         <xsl:attribute name="font-family">Tahoma</xsl:attribute>
         <xsl:attribute name="font-size">12</xsl:attribute>
-        <xsl:value-of select="@Text"/>
+        <xsl:for-each select="$annotationLines">
+          <tspan>
+            <xsl:attribute name="x"><xsl:value-of select="number($x)"/></xsl:attribute>
+            <xsl:attribute name="dy"><xsl:value-of select="(position() - 1) * 12" /></xsl:attribute>
+            <xsl:value-of select="." />
+          </tspan>
+        </xsl:for-each>
       </text>
 
       <rect>

@@ -243,12 +243,10 @@
    </g>
    <!--Package\DFT LoadData-->
    <g>
-      <text x="536"
-            y="78"
-            fill="black"
-            font-family="Tahoma"
-            font-size="12">DFT Annotation&#xD;
-Just for tests</text>
+      <text y="78" fill="black" font-family="Tahoma" font-size="12">
+         <tspan x="536" dy="0">DFT Annotation</tspan>
+         <tspan x="536" dy="12">Just for tests</tspan>
+      </text>
       <rect x="536"
             y="48"
             width="112"
