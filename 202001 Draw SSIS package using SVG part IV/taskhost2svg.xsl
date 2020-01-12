@@ -182,12 +182,15 @@
     <xsl:variable name="x" select="sum(for $p in $paths return number(substring-before($p/@TopLeft, ','))) + $x0" />
     <xsl:variable name="y" select="sum(for $p in $paths return number(substring-after($p/@TopLeft, ','))  + number($p/@HeaderHeight)) + $y0" />
 
-    <!-- the color of the edge depends on DTS:Value -->
+    <!-- If it's EdgeLayout in the DataFlow find the corresponding path element -->
+    <xsl:variable name="dftPathElement" select="$packageContent//paths/path[@refId = $localId]" />
+    <xsl:variable name="dftPathElementOutput" select="$packageContent//paths/path[@refId = $localId]/@startId" />
+
+    <!-- the color of the edge depends on isErrorOutput attribute -->
     <xsl:variable name="lineColor">
       <xsl:choose>
-        <xsl:when test="count($packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value) = 0">#006600</xsl:when> <!-- Success -->
-        <xsl:when test="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value = 1">#dd0000</xsl:when><!-- Failure -->
-        <xsl:when test="$packageContent//DTS:PrecedenceConstraint[@DTS:refId=$localId]/@DTS:Value = 2">#000000</xsl:when><!-- Completion -->
+        <xsl:when test="$packageContent//outputs/output[@refId = $dftPathElementOutput]/@isErrorOut = 'true'">#dd0000</xsl:when> <!-- Error -->
+        <xsl:otherwise>#0000dd</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
     
@@ -329,6 +332,27 @@
             </xsl:choose>
           </xsl:variable>
 
+          <!-- another option - the path in the Data Flow -->
+          <xsl:variable name="pathAnnotationType" select="/Objects/PipelinePath[@design-time-name=$localId]/PathAnnotation" />
+
+          <xsl:variable name="dtsxPathElement" select="$packageContent//DTS:ObjectData/pipeline/paths/path[@refId=$localId]" />
+          
+          <xsl:variable name="pathAnnotation">
+            <xsl:choose>
+              <xsl:when test="$pathAnnotationType eq 'PathName'"><xsl:value-of select="$dtsxPathElement/@name" /></xsl:when>
+              <!-- <xsl:when test="$pathAnnotationType eq 'PathName'"><xsl:value-of select="count($packageContent//DTS:ObjectData)" /></xsl:when> -->
+            </xsl:choose>
+          </xsl:variable>
+
+          <!-- if the path is for an error output, then display the path name (version: PathAnnotations: AsNeeded) -->
+          <xsl:variable name="pathAnnotationForError" select="$packageContent//DTS:ObjectData/pipeline/components/component/outputs/output[@isErrorOut='true'][@refId=$dtsxPathElement/@startId]/@name" />
+          <xsl:variable name="pathAnnotationComponentClass" select="$packageContent//DTS:ObjectData/pipeline/components/component/outputs/output[@refId=$dtsxPathElement/@startId]/../../@componentClassID" />
+
+          <xsl:comment><xsl:value-of select="concat('$localId: ', $localId)" /></xsl:comment>
+          <xsl:comment><xsl:value-of select="concat('$pathAnnotationType: ', $pathAnnotationType, ' | $pathAnnotation: ', $pathAnnotation)" /></xsl:comment>
+          <xsl:comment><xsl:value-of select="count($pathAnnotationForError)" /></xsl:comment>
+          <xsl:comment><xsl:value-of select="concat('componentClass: ', $pathAnnotationComponentClass)" /></xsl:comment>
+
           <rect>
             <xsl:attribute name="x"><xsl:value-of select="number($x) + number($BoundingBox[1])"/></xsl:attribute>
             <xsl:attribute name="y"><xsl:value-of select="number($y) + number($BoundingBox[2])"/></xsl:attribute>
@@ -358,6 +382,37 @@
             <xsl:value-of select="$value"/>
           </text>
 
+          <text>
+            <xsl:attribute name="x"><xsl:value-of select="number($x) + number($BoundingBox[1])"/></xsl:attribute>
+            <xsl:attribute name="y"><xsl:value-of select="number($y) + number($BoundingBox[2]) + number($BoundingBox[4]) - 2"/></xsl:attribute>
+            <xsl:attribute name="fill">black</xsl:attribute>
+            <xsl:attribute name="font-family">Tahoma</xsl:attribute>
+            <xsl:attribute name="font-size">10</xsl:attribute>
+            <xsl:value-of select="$pathAnnotation"/>
+          </text>
+
+          <text>
+            <xsl:attribute name="x"><xsl:value-of select="number($x) + number($BoundingBox[1])"/></xsl:attribute>
+            <xsl:attribute name="y"><xsl:value-of select="number($y) + number($BoundingBox[2]) + number($BoundingBox[4]) - 2"/></xsl:attribute>
+            <xsl:attribute name="fill">black</xsl:attribute>
+            <xsl:attribute name="font-family">Tahoma</xsl:attribute>
+            <xsl:attribute name="font-size">10</xsl:attribute>
+            <xsl:value-of select="$pathAnnotationForError"/>
+          </text>
+
+          <xsl:choose>
+            <xsl:when test="$pathAnnotationComponentClass='Microsoft.ConditionalSplit'">
+              <text>
+                <xsl:attribute name="x"><xsl:value-of select="number($x) + number($BoundingBox[1])"/></xsl:attribute>
+                <xsl:attribute name="y"><xsl:value-of select="number($y) + number($BoundingBox[2]) + number($BoundingBox[4]) - 2"/></xsl:attribute>
+                <xsl:attribute name="fill">black</xsl:attribute>
+                <xsl:attribute name="font-family">Tahoma</xsl:attribute>
+                <xsl:attribute name="font-size">10</xsl:attribute>
+                <xsl:value-of select="$dtsxPathElement/@name"/>
+              </text>
+            </xsl:when>
+          </xsl:choose>
+
         </xsl:if>
 
     </g>
@@ -384,7 +439,8 @@
     <xsl:variable name="y" select="sum(for $p in $paths return number(substring-after($p/@TopLeft, ','))  + number($p/@HeaderHeight)) + $y0" />
 
     <!-- the text for the annotation can contain line endings; I need separatelines then, so I store them in a sequence -->
-    <xsl:variable name="annotationLines" select="tokenize(@Text, '&#xD;&#xA;')" />
+    <!-- <xsl:variable name="annotationLines" select="tokenize(@Text, '&#xD;&#xA;')" /> -->
+    <xsl:variable name="annotationLines" select="tokenize(replace(@Text, '&#xD;', ''), '&#xA;')" />
 
     <g xmlns="http://www.w3.org/2000/svg">
       <text>

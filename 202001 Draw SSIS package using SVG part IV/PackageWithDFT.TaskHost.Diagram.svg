@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+     xmlns:gl="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph"
+     xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph"
+     xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph"
+     xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+     viewBox="0 0 2100 600">
+   <rect width="100%" height="100%" fill="lightgray"/>
+   <!--Package\DFT LoadData:Package\DFT LoadData\SCR_SRC SourceData-->
+   <g>
+      <rect x="155"
+            y="22"
+            rx="5"
+            ry="5"
+            width="180"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="160"
+            y="50"
+            fill="black"
+            font-family="Tahoma"
+            font-size="12">SCR_SRC SourceData</text>
+   </g>
+   <!--Package\DFT LoadData:Package\DFT LoadData\SCR_DEST Even-->
+   <g>
+      <rect x="169"
+            y="225"
+            rx="5"
+            ry="5"
+            width="155"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="174"
+            y="253"
+            fill="black"
+            font-family="Tahoma"
+            font-size="12">SCR_DEST Even</text>
+   </g>
+   <!--Package\DFT LoadData:Package\DFT LoadData\SCR_DEST Odd-->
+   <g>
+      <rect x="411"
+            y="228"
+            rx="5"
+            ry="5"
+            width="152"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="416"
+            y="256"
+            fill="black"
+            font-family="Tahoma"
+            font-size="12">SCR_DEST Odd</text>
+   </g>
+   <!--Package\DFT LoadData:Package\DFT LoadData\CSPL Even_Odd-->
+   <g>
+      <rect x="347"
+            y="107"
+            rx="5"
+            ry="5"
+            width="154"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="352"
+            y="135"
+            fill="black"
+            font-family="Tahoma"
+            font-size="12">CSPL Even_Odd</text>
+   </g>
+   <!--Package\DFT LoadData:Package\DFT LoadData\DER Audit-->
+   <g>
+      <rect x="46"
+            y="102"
+            rx="5"
+            ry="5"
+            width="126"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="51"
+            y="130"
+            fill="black"
+            font-family="Tahoma"
+            font-size="12">DER Audit</text>
+   </g>
+   <!--Package\DFT LoadData:Package\DFT LoadData\RD_DEST Errors-->
+   <g>
+      <rect x="653"
+            y="167"
+            rx="5"
+            ry="5"
+            width="155"
+            height="42"
+            fill="white"
+            stroke="black"
+            stroke-width="1"/>
+      <text x="658"
+            y="195"
+            fill="black"
+            font-family="Tahoma"
+            font-size="12">RD_DEST Errors</text>
+   </g>
+   <!---->
+   <!---->
+   <g><!--element: Package\DFT LoadData.Paths[OutputOdd]--><!--offsetX: 0--><!--offsetY: 0-->
+      <line x1="448.333333333333"
+            y1="149"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="448.333333333333"
+            y2="177.0874035989717"
+            stroke-dasharray="5"/>
+      <path d="M448.333333333333,177.0874035989717 Q448.333333333333,181.0874035989717 452.333333333333,181.0874035989717"
+            style="stroke:#0000dd; fill:none; stroke-width: 2px;"/>
+      <line x1="452.333333333333"
+            y1="181.0874035989717"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="482.99999999999966"
+            y2="181.0874035989717"
+            stroke-dasharray="5"/>
+      <path d="M482.99999999999966,181.0874035989717 Q486.99999999999966,181.0874035989717 486.99999999999966,185.0874035989717"
+            style="stroke:#0000dd; fill:none; stroke-width: 2px;"/>
+      <line x1="486.99999999999966"
+            y1="185.0874035989717"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="486.99999999999966"
+            y2="220.5"
+            stroke-dasharray="5"/>
+      <polygon points="483.99999999999966,220.5 489.99999999999966,220.5 486.99999999999966,228"
+               style="stroke:#0000dd; fill:#0000dd"/>
+      <!--$annotationType:  | $precedenceConstraintValue: -->
+      <!--$localId: Package\DFT LoadData.Paths[OutputOdd]-->
+      <!--$pathAnnotationType:  | $pathAnnotation: -->
+      <!--0-->
+      <!--componentClass: Microsoft.ConditionalSplit-->
+      <rect x="442.8661588541663"
+            y="186.0874035989717"
+            width="49.601015625"
+            height="11.609375"
+            fill="none"
+            stroke="red"
+            stroke-width="1"/>
+      <text x="442.8661588541663"
+            y="195.6967785989717"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="442.8661588541663"
+            y="195.6967785989717"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="442.8661588541663"
+            y="195.6967785989717"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="442.8661588541663"
+            y="195.6967785989717"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="442.8661588541663"
+            y="195.6967785989717"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10">OutputOdd</text>
+   </g>
+   <!---->
+   <!---->
+   <g><!--element: Package\DFT LoadData.Paths[OutputEven]--><!--offsetX: 0--><!--offsetY: 0-->
+      <line x1="399.666666666667"
+            y1="149"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="399.666666666667"
+            y2="175.8688946015424"
+            stroke-dasharray="5"/>
+      <path d="M399.666666666667,175.8688946015424 Q399.666666666667,179.8688946015424 395.666666666667,179.8688946015424"
+            style="stroke:#0000dd; fill:none; stroke-width: 2px;"/>
+      <line x1="395.666666666667"
+            y1="179.8688946015424"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="250.50000000000003"
+            y2="179.8688946015424"
+            stroke-dasharray="5"/>
+      <path d="M250.50000000000003,179.8688946015424 Q246.50000000000003,179.8688946015424 246.50000000000003,183.8688946015424"
+            style="stroke:#0000dd; fill:none; stroke-width: 2px;"/>
+      <line x1="246.50000000000003"
+            y1="183.8688946015424"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="246.50000000000003"
+            y2="217.5"
+            stroke-dasharray="5"/>
+      <polygon points="243.50000000000003,217.5 249.50000000000003,217.5 246.50000000000003,225"
+               style="stroke:#0000dd; fill:#0000dd"/>
+      <!--$annotationType:  | $precedenceConstraintValue: -->
+      <!--$localId: Package\DFT LoadData.Paths[OutputEven]-->
+      <!--$pathAnnotationType:  | $pathAnnotation: -->
+      <!--0-->
+      <!--componentClass: Microsoft.ConditionalSplit-->
+      <rect x="296.618880208334"
+            y="184.8688946015424"
+            width="52.92890625"
+            height="11.43359375"
+            fill="none"
+            stroke="red"
+            stroke-width="1"/>
+      <text x="296.618880208334"
+            y="194.3024883515424"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="296.618880208334"
+            y="194.3024883515424"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="296.618880208334"
+            y="194.3024883515424"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="296.618880208334"
+            y="194.3024883515424"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="296.618880208334"
+            y="194.3024883515424"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10">OutputEven</text>
+   </g>
+   <!---->
+   <!---->
+   <g><!--element: Package\DFT LoadData.Paths[Output 0]--><!--offsetX: 0--><!--offsetY: 0-->
+      <line x1="245"
+            y1="64"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="245"
+            y2="79"
+            stroke-dasharray="5"/>
+      <path d="M245,79 Q245,83 241,83"
+            style="stroke:#0000dd; fill:none; stroke-width: 2px;"/>
+      <line x1="241"
+            y1="83"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="113"
+            y2="83"
+            stroke-dasharray="5"/>
+      <path d="M113,83 Q109,83 109,87"
+            style="stroke:#0000dd; fill:none; stroke-width: 2px;"/>
+      <line x1="109"
+            y1="87"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="109"
+            y2="94.5"
+            stroke-dasharray="5"/>
+      <polygon points="106,94.5 112,94.5 109,102" style="stroke:#0000dd; fill:#0000dd"/>
+   </g>
+   <!---->
+   <!---->
+   <g><!--element: Package\DFT LoadData.Paths[Data with audit information]--><!--offsetX: 0--><!--offsetY: 0-->
+      <line x1="172"
+            y1="125.5"
+            style="stroke:#0000dd; stroke-width: 2px;"
+            x2="339.5"
+            y2="125.5"
+            stroke-dasharray="5"/>
+      <polygon points="336.5,125.5 342.5,125.5 347,125.5"
+               style="stroke:#0000dd; fill:#0000dd"/>
+      <!--$annotationType:  | $precedenceConstraintValue: -->
+      <!--$localId: Package\DFT LoadData.Paths[Data with audit information]-->
+      <!--$pathAnnotationType: PathName | $pathAnnotation: Data with audit information-->
+      <!--0-->
+      <!--componentClass: Microsoft.DerivedColumn-->
+      <rect x="194.93306640625"
+            y="130.5"
+            width="121.6338671875"
+            height="9.7978515625"
+            fill="none"
+            stroke="red"
+            stroke-width="1"/>
+      <text x="194.93306640625"
+            y="138.2978515625"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="194.93306640625"
+            y="138.2978515625"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="194.93306640625"
+            y="138.2978515625"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10">Data with audit information</text>
+      <text x="194.93306640625"
+            y="138.2978515625"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+   </g>
+   <!---->
+   <!---->
+   <g><!--element: Package\DFT LoadData.Paths[Conditional Split Error Output]--><!--offsetX: 0--><!--offsetY: 0-->
+      <line x1="501"
+            y1="128"
+            style="stroke:#dd0000; stroke-width: 2px;"
+            x2="573"
+            y2="128"
+            stroke-dasharray="5"/>
+      <path d="M573,128 Q577,128 577,132"
+            style="stroke:#dd0000; fill:none; stroke-width: 2px;"/>
+      <line x1="577"
+            y1="132"
+            style="stroke:#dd0000; stroke-width: 2px;"
+            x2="577"
+            y2="184"
+            stroke-dasharray="5"/>
+      <path d="M577,184 Q577,188 581,188"
+            style="stroke:#dd0000; fill:none; stroke-width: 2px;"/>
+      <line x1="581"
+            y1="188"
+            style="stroke:#dd0000; stroke-width: 2px;"
+            x2="645.5"
+            y2="188"
+            stroke-dasharray="5"/>
+      <polygon points="642.5,188 648.5,188 653,188"
+               style="stroke:#dd0000; fill:#dd0000"/>
+      <!--$annotationType:  | $precedenceConstraintValue: -->
+      <!--$localId: Package\DFT LoadData.Paths[Conditional Split Error Output]-->
+      <!--$pathAnnotationType:  | $pathAnnotation: -->
+      <!--1-->
+      <!--componentClass: Microsoft.ConditionalSplit-->
+      <rect x="511.30609375"
+            y="110.390625"
+            width="131.3878125"
+            height="11.609375"
+            fill="none"
+            stroke="red"
+            stroke-width="1"/>
+      <text x="511.30609375"
+            y="120"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="511.30609375"
+            y="120"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="511.30609375"
+            y="120"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10"/>
+      <text x="511.30609375"
+            y="120"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10">Conditional Split Error Output</text>
+      <text x="511.30609375"
+            y="120"
+            fill="black"
+            font-family="Tahoma"
+            font-size="10">Conditional Split Error Output</text>
+   </g>
+   <!--Package\DFT LoadData-->
+   <g>
+      <text y="76" fill="black" font-family="Tahoma" font-size="12">
+         <tspan x="536" dy="0">DFT Annotation</tspan>
+         <tspan x="536" dy="12">Just for tests</tspan>
+      </text>
+      <rect x="536"
+            y="48"
+            width="112"
+            height="56"
+            fill="none"
+            stroke="black"
+            stroke-width="1"/>
+   </g>
+</svg>

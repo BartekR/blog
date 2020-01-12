@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="PackageWithDFT"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{2FDFD615-2DF8-4BFD-A5FD-707398A5F9AF}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{8E33C9B1-036C-44DF-B835-FF5165F4B20A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -24,6 +24,24 @@
       DTS:ObjectName="AuditKey">
       <DTS:VariableValue
         DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B19907B2-0FCB-44EC-8DEC-60104993C015}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RecordsetV">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -68,7 +86,7 @@
                   refId="Package\DFT LoadData\CSPL Even_Odd.Outputs[OutputEven]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   exclusionGroup="1"
                   name="OutputEven"
                   synchronousInputId="Package\DFT LoadData\CSPL Even_Odd.Inputs[Conditional Split Input]"
@@ -230,6 +248,61 @@
                   <externalMetadataColumns />
                 </output>
               </outputs>
+            </component>
+            <component
+              refId="Package\DFT LoadData\RD_DEST Errors"
+              componentClassID="Microsoft.RecordsetDestination"
+              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
+              name="RD_DEST Errors">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the recordset."
+                  name="VariableName">User::RecordsetV</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT LoadData\RD_DEST Errors.Inputs[Recordset Destination Input]"
+                  hasSideEffects="true"
+                  name="Recordset Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT LoadData\RD_DEST Errors.Inputs[Recordset Destination Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      lineageId="Package\DFT LoadData\SCR_SRC SourceData.Outputs[Output 0].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\DFT LoadData\RD_DEST Errors.Inputs[Recordset Destination Input].Columns[Name]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Name"
+                      lineageId="Package\DFT LoadData\SCR_SRC SourceData.Outputs[Output 0].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\DFT LoadData\RD_DEST Errors.Inputs[Recordset Destination Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      lineageId="Package\DFT LoadData\SCR_SRC SourceData.Outputs[Output 0].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\DFT LoadData\RD_DEST Errors.Inputs[Recordset Destination Input].Columns[AuditKey]"
+                      cachedDataType="i4"
+                      cachedName="AuditKey"
+                      lineageId="Package\DFT LoadData\DER Audit.Outputs[Derived Column Output].Columns[AuditKey]" />
+                    <inputColumn
+                      refId="Package\DFT LoadData\RD_DEST Errors.Inputs[Recordset Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\DFT LoadData\CSPL Even_Odd.Outputs[Conditional Split Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\DFT LoadData\RD_DEST Errors.Inputs[Recordset Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\DFT LoadData\CSPL Even_Odd.Outputs[Conditional Split Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
             </component>
             <component
               refId="Package\DFT LoadData\SCR_DEST Even"
@@ -2812,6 +2885,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </components>
           <paths>
             <path
+              refId="Package\DFT LoadData.Paths[Conditional Split Error Output]"
+              endId="Package\DFT LoadData\RD_DEST Errors.Inputs[Recordset Destination Input]"
+              name="Conditional Split Error Output"
+              startId="Package\DFT LoadData\CSPL Even_Odd.Outputs[Conditional Split Error Output]" />
+            <path
               refId="Package\DFT LoadData.Paths[Data with audit information]"
               endId="Package\DFT LoadData\CSPL Even_Odd.Inputs[Conditional Split Input]"
               name="Data with audit information"
@@ -2865,72 +2943,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Id="Package\DFT LoadData\SCR_SRC SourceData"
           TopLeft="155,22" />
         <NodeLayout
-          Size="126,42"
-          Id="Package\DFT LoadData\DER Audit"
-          TopLeft="46,102" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\DFT LoadData\CSPL Even_Odd"
-          TopLeft="347,107" />
-        <EdgeLayout
-          Id="Package\DFT LoadData.Paths[Output 0]"
-          TopLeft="245,64">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-136,38"
-              Start="0,0"
-              End="-136,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15"
-                    Point2="0,19"
-                    Point3="-4,19" />
-                  <mssgle:LineSegment
-                    End="-132,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-132,19"
-                    Point2="-136,19"
-                    Point3="-136,23" />
-                  <mssgle:LineSegment
-                    End="-136,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT LoadData.Paths[Data with audit information]"
-          TopLeft="172,125.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="175,0"
-              Start="0,0"
-              End="167.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="167.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="22.93306640625,5,121.6338671875,9.7978515625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="155,42"
           Id="Package\DFT LoadData\SCR_DEST Even"
           TopLeft="169,225" />
@@ -2938,6 +2950,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Size="152,42"
           Id="Package\DFT LoadData\SCR_DEST Odd"
           TopLeft="411,228" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\DFT LoadData\CSPL Even_Odd"
+          TopLeft="347,107" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\DFT LoadData\DER Audit"
+          TopLeft="46,102" />
         <EdgeLayout
           Id="Package\DFT LoadData.Paths[OutputOdd]"
           TopLeft="448.333333333333,149">
@@ -3010,13 +3030,111 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT LoadData.Paths[Output 0]"
+          TopLeft="245,64">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-136,38"
+              Start="0,0"
+              End="-136,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="-4,19" />
+                  <mssgle:LineSegment
+                    End="-132,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-132,19"
+                    Point2="-136,19"
+                    Point3="-136,23" />
+                  <mssgle:LineSegment
+                    End="-136,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT LoadData.Paths[Data with audit information]"
+          TopLeft="172,125.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="175,0"
+              Start="0,0"
+              End="167.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="167.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="22.93306640625,5,121.6338671875,9.7978515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <AnnotationLayout
-          Text="DFT Annotation&#xD;&#xA;Just for tests"
+          Text="DFT Annotation&#xA;Just for tests"
           ParentId="Package\DFT LoadData"
           FontInfo="{assembly:Null}"
-          Size="112,60"
+          Size="112,56"
           Id="a3c856b3-25c7-44f0-987d-6cba16d869c0"
           TopLeft="536,48" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\DFT LoadData\RD_DEST Errors"
+          TopLeft="653,167" />
+        <EdgeLayout
+          Id="Package\DFT LoadData.Paths[Conditional Split Error Output]"
+          TopLeft="501,128">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152,60"
+              Start="0,0"
+              End="144.5,60">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="72,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72,0"
+                    Point2="76,0"
+                    Point3="76,4" />
+                  <mssgle:LineSegment
+                    End="76,56" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76,56"
+                    Point2="76,60"
+                    Point3="80,60" />
+                  <mssgle:LineSegment
+                    End="144.5,60" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="10.30609375,-17.609375,131.3878125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
