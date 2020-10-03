@@ -1,2 +1,5 @@
 *.suo
 *.dtproj.user
+
+**/obj/*
+.ionide
