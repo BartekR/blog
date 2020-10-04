@@ -3,3 +3,10 @@
 
 **/obj/*
 .ionide
+.fake
+
+.terraform
+*.tfplan
+*.tfstate
+*.tfstate.backup
+secret.variables.tf
