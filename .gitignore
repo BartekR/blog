@@ -10,3 +10,5 @@
 *.tfstate
 *.tfstate.backup
 secret.variables.tf
+
+.workInProgress
