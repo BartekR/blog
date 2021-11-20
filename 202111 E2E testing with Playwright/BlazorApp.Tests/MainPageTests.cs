@@ -16,6 +16,20 @@ class MainPageTests : PageTest
         var content = await Page.TextContentAsync("p");
 
         // assertion for the value
-        Assert.AreEqual("Current count: 42", content);
+        Assert.AreEqual("Current count: 0", content);
+    }
+
+    [Test]
+    public async Task ClickingCounterRedirectsToCounterPage()
+    {
+        // call to the main page
+        await Page.GotoAsync("http://localhost:5165/");
+
+        // search for the counter link and click it
+        await Page.ClickAsync("text=Counter");
+
+        // verify redirection
+        System.Uri pageUri = new System.Uri(Page.Url);
+        Assert.AreEqual("/counter", pageUri.PathAndQuery);
     }
 }
