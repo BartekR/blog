@@ -1,6 +1,7 @@
 using Microsoft.Playwright.NUnit;
 using NUnit.Framework;
 using System.Threading.Tasks;
+using System;
 
 namespace BlazorApp.Tests;
 
@@ -29,7 +30,7 @@ class MainPageTests : PageTest
         await Page.ClickAsync("text=Counter");
 
         // verify redirection
-        System.Uri pageUri = new System.Uri(Page.Url);
+        Uri pageUri = new Uri(Page.Url);
         Assert.AreEqual("/counter", pageUri.PathAndQuery);
     }
 }
