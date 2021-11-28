@@ -7,24 +7,32 @@ namespace BlazorApp.Tests;
 
 class MainPageTests : PageTest
 {
+    private string pageUrl = "";
+
+    [SetUp]
+    public void Init()
+    {
+        pageUrl = "http://localhost:5165";
+    }
+    
     [Test]
-    public async Task CounterStartsWithZero()
+    public async Task PageTitleIsIndex()
     {
         // call to the `/counter` page
-        await Page.GotoAsync("http://localhost:5165/counter");
+        await Page.GotoAsync(this.pageUrl);
 
-        // search for the counter value
-        var content = await Page.TextContentAsync("p");
+        // get page title
+        string title = await Page.TitleAsync();
 
         // assertion for the value
-        Assert.AreEqual("Current count: 0", content);
+        Assert.AreEqual("Index", title);
     }
 
     [Test]
     public async Task ClickingCounterRedirectsToCounterPage()
     {
         // call to the main page
-        await Page.GotoAsync("http://localhost:5165/");
+        await Page.GotoAsync(this.pageUrl);
 
         // search for the counter link and click it
         await Page.ClickAsync("text=Counter");
@@ -32,5 +40,19 @@ class MainPageTests : PageTest
         // verify redirection
         Uri pageUri = new Uri(Page.Url);
         Assert.AreEqual("/counter", pageUri.PathAndQuery);
+    }
+
+    [Test]
+    public async Task ClickingFetchDataRedirectsToWeatherForecastPage()
+    {
+        // call to the main page
+        await Page.GotoAsync(this.pageUrl);
+
+        // search for the counter link and click it
+        await Page.ClickAsync("text=Fetch data");
+
+        // verify redirection
+        System.Uri pageUri = new System.Uri(Page.Url);
+        Assert.AreEqual("/fetchdata", pageUri.PathAndQuery);
     }
 }

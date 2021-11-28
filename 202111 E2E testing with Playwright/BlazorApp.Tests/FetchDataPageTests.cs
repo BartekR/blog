@@ -1,4 +1,5 @@
 using Microsoft.Playwright.NUnit;
+using Microsoft.Playwright;
 using NUnit.Framework;
 using System.Threading.Tasks;
 using System;
@@ -7,11 +8,21 @@ namespace BlazorApp.Tests;
 
 class FetchDataPageTests : PageTest
 {
+
+    private string pageUrl = "";
+
+    [SetUp]
+    public void Init()
+    {
+        string baseUrl = "http://localhost:5165";
+        pageUrl = $"{baseUrl}/fetchdata";
+    }
+
     [Test]
     public async Task PageTitleIsWeatherForecast()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get page title
         string title = await Page.TitleAsync();
@@ -24,7 +35,7 @@ class FetchDataPageTests : PageTest
     public async Task TableContains5DataRows_EvalOnSelectorAllAsync_Tr()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows
         int tableRows = await Page.EvalOnSelectorAllAsync<int>("//table/tbody/tr", "rows => rows.length");
@@ -37,7 +48,7 @@ class FetchDataPageTests : PageTest
     public async Task TableContains6RowsTotal()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows
         int tableRows = await Page.EvalOnSelectorAsync<int>("//table", "tbl => tbl.rows.length");
@@ -50,7 +61,7 @@ class FetchDataPageTests : PageTest
     public async Task TableDatesStartTomorrowAscending()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows
         string date1 = await Page.Locator("//table/tbody/tr[1]/td[1]").InnerTextAsync();
@@ -71,7 +82,7 @@ class FetchDataPageTests : PageTest
     public async Task TableContains5DataRows_EvalOnSelectorAsync_Tr_Rows_Length()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows (no header)
         int tableRows = await Page.EvalOnSelectorAsync<int>("//table/tbody/tr", "rows => rows.length");
@@ -84,7 +95,7 @@ class FetchDataPageTests : PageTest
     public async Task TableContains5DataRows_EvalOnSelectorAsync_TBody_ChildNodes_Length()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows
         int tableRows = await Page.EvalOnSelectorAsync<int>("//table/tbody", "tbody => tbody.childNodes.length");
@@ -97,7 +108,7 @@ class FetchDataPageTests : PageTest
     public async Task TableContains5DataRows_EvalOnSelectorAsync_TBody_ChildElementCount()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows
         int tableRows = await Page.EvalOnSelectorAsync<int>("//table/tbody", "tbody => tbody.childElementCount");
@@ -110,7 +121,7 @@ class FetchDataPageTests : PageTest
     public async Task TableContains5DataRows_EvalOnSelectorAsync_Tbody_Rows_Length()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows
         int tableRows = await Page.EvalOnSelectorAsync<int>("//table/tbody", "tbody => tbody.rows.length");
@@ -123,7 +134,7 @@ class FetchDataPageTests : PageTest
     public async Task TableContains5DataRows_Locator()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows using Locator; Locator is strict and requires exactly 1 element to be matched, BUT CountAsync() knows how to handle multiple elements
         int tableRows = await Page.Locator("//table/tbody/tr").CountAsync();
@@ -136,7 +147,7 @@ class FetchDataPageTests : PageTest
     public async Task TableHeaderHas16pxFont()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows
         string fontSize = await Page.EvalOnSelectorAsync<string>("//table/thead/tr/th", "cell => window.getComputedStyle(cell).fontSize");
@@ -149,7 +160,7 @@ class FetchDataPageTests : PageTest
     public async Task TableHeaderHas16pxFont_Locator()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows using Locator(); Locator is strict and requires exactly 1 element to be matched
         string fontSize = await Page.Locator("(//table/thead/tr/th)[1]").EvaluateAsync<string>("cell => window.getComputedStyle(cell).fontSize");
@@ -159,10 +170,24 @@ class FetchDataPageTests : PageTest
     }
 
     [Test]
+    public async Task TableHeaderHas16pxFont_Locator_v2()
+    {
+        // call to the `/fetchdata` page
+        await Page.GotoAsync(this.pageUrl);
+
+        // get number of table rows using Locator(); Locator is strict and requires exactly 1 element to be matched
+        ILocator th = Page.Locator("(//table/thead/tr/th)[1]");
+        string fontSize = await th.EvaluateAsync<string>("cell => window.getComputedStyle(cell).fontSize");
+
+        // assertion for the value
+        Assert.AreEqual("16px", fontSize);
+    }
+
+    [Test]
     public async Task TableContainsBlackBoldHeader()
     {
         // call to the `/fetchdata` page
-        await Page.GotoAsync("http://localhost:5165/fetchdata");
+        await Page.GotoAsync(this.pageUrl);
 
         // get number of table rows
         string fontWeight = await Page.EvalOnSelectorAsync<string>("//table/thead/tr/th", "cell => window.getComputedStyle(cell).fontWeight");

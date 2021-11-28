@@ -7,19 +7,20 @@ namespace BlazorApp.Tests;
 
 class CounterPageTests : PageTest
 {
-    private string? pageUrl;
+    private string pageUrl = "";
 
     [SetUp]
     public void Init()
     {
-        pageUrl = "http://localhost:5165";
+        string baseUrl = "http://localhost:5165";
+        pageUrl = $"{baseUrl}/counter";
     }
     
     [Test]
     public async Task CounterStartsWithZero()
     {
         // call to the `/counter` page
-        await Page.GotoAsync($"{pageUrl}/counter");
+        await Page.GotoAsync(this.pageUrl);
 
         // search for the counter value
         var content = await Page.TextContentAsync("p");
