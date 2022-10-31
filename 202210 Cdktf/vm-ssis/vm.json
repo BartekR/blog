@@ -1,0 +1,95 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2022-03-01",
+            "name": "vm-ssis2",
+            "location": "norwayeast",
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D2s_v3"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "microsoftsqlserver",
+                        "offer": "sql2019-ws2019",
+                        "sku": "sqldev",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Windows",
+                        "name": "vm-ssis2_OsDisk_1_f166c9c1f7564f83902e3b33a1c2f500",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "storageAccountType": "Premium_LRS",
+                            "id": "/subscriptions/c70114c1-0ba7-4f72-ab70-3145a0f869a7/resourceGroups/VM-RG/providers/Microsoft.Compute/disks/vm-ssis2_OsDisk_1_f166c9c1f7564f83902e3b33a1c2f500"
+                        },
+                        "deleteOption": "Delete",
+                        "diskSizeGB": 127
+                    },
+                    "dataDisks": [
+                        {
+                            "lun": 0,
+                            "name": "vm-ssis2_DataDisk_0",
+                            "createOption": "Attach",
+                            "caching": "ReadOnly",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+                                "storageAccountType": "Premium_LRS",
+                                "id": "/subscriptions/c70114c1-0ba7-4f72-ab70-3145a0f869a7/resourceGroups/VM-RG/providers/Microsoft.Compute/disks/vm-ssis2_DataDisk_0"
+                            },
+                            "deleteOption": "Detach",
+                            "diskSizeGB": 1024,
+                            "toBeDetached": false
+                        },
+                        {
+                            "lun": 1,
+                            "name": "vm-ssis2_DataDisk_1",
+                            "createOption": "Attach",
+                            "caching": "None",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+                                "storageAccountType": "Premium_LRS",
+                                "id": "/subscriptions/c70114c1-0ba7-4f72-ab70-3145a0f869a7/resourceGroups/VM-RG/providers/Microsoft.Compute/disks/vm-ssis2_DataDisk_1"
+                            },
+                            "deleteOption": "Detach",
+                            "diskSizeGB": 1024,
+                            "toBeDetached": false
+                        }
+                    ]
+                },
+                "osProfile": {
+                    "computerName": "vm-ssis2",
+                    "adminUsername": "bartekr",
+                    "windowsConfiguration": {
+                        "provisionVMAgent": true,
+                        "enableAutomaticUpdates": true,
+                        "patchSettings": {
+                            "patchMode": "AutomaticByOS",
+                            "assessmentMode": "ImageDefault",
+                            "enableHotpatching": false
+                        }
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true,
+                    "requireGuestProvisionSignal": true
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "/subscriptions/c70114c1-0ba7-4f72-ab70-3145a0f869a7/resourceGroups/VM-RG/providers/Microsoft.Network/networkInterfaces/vm-ssis2434",
+                            "properties": {
+                                "deleteOption": "Detach"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
